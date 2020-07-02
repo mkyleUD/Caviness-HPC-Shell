@@ -123,3 +123,6 @@ workshop_sched_id: "ComputeCanada_Graham_slurm"
 # workshop_host_location: "EPCC, The University of Edinburgh"
 # workshop_host_prompt: "[yourUsername@cirrus-login0 ~]$ "
 # workshop_host_homedir: "/lustre/home/tc001"
+
+# Costum host location
+host: 192.168.123.25
