@@ -11,7 +11,7 @@ files/*.fb
 files/*.fastq
 files/*.tsv
 scratch/
-Gemfile.locl
+Gemfile.lock
 Gemfile
 .*history
 
