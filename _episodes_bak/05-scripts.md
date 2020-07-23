@@ -476,4 +476,3 @@ gene_association.fb.gz
 > > no permissions, i.e. 0, for group (second position) and all (third position). 
 > {: .solution}
 {: .challenge}
-{% include links.md %}

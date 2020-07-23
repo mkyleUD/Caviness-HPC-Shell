@@ -1,10 +1,9 @@
 ---
-title: "Navigating the Caviness File Structure"
-teaching: 30 
+title: "Moving around and looking at things"
+teaching: 15 
 exercises: 5
 questions:
-- "How do I navigate and start interacting with files and directories on Caviness?"
-- "How do I track where I am at?"
+- "How do I navigate and look around the system?"
 objectives:
 - Learn how to navigate around directories and look at their contents
 - Explain the difference between a file and a directory.
@@ -16,13 +15,12 @@ keypoints:
 - "To change directories, use `cd`."
 - "To view files, use `ls`."
 - "You can view help for a command with `man command` or `command --help`."
-- "Hit the <kbd>TAB</kbd> key to autocomplete whatever you're currently typing."
+- "Hit `tab` to autocomplete whatever you're currently typing."
 ---
 
 At the point in this lesson, we've just logged into the system. Nothing has happened yet, and we're
-not going to be able to do anything until we learn a few basic commands. In this lesson we will talk
-about `ls`, `cd`, and a few other commands. This commands will help you navigate around not only the
-Caviness File structure but nearly any Linux/Unix File system using the CLI. 
+not going to be able to do anything until we learn a few basic commands. By the end of this lesson,
+you will know how to "move around" the system and look at what's there.
 
 Right now, all we see is something that looks like this:
 
@@ -31,15 +29,13 @@ Right now, all we see is something that looks like this:
 ~~~
 {: .language-bash}
 
-The dollar sign is a **prompt**, which shows us that the shell is waiting for input. If you do not 
-see the dollar sign then the system is not ready for your next input. This applies for the duration
-of your session. Later on we will talk about what happens if enter a command and a `$` prompt does
-not return to your screen. When typing commands, either from these lessons or from other sources,
-**do not type** the prompt `$`, only the commands that follow it.
+The dollar sign is a **prompt**, which shows us that the shell is waiting for input; your shell may
+use a different character as a prompt and may add information before the prompt. When typing
+commands, either from these lessons or from other sources, do not type the prompt, only the commands
+that follow it.
 
-Type the command `whoami`, then press the <kbd>enter</kbd> key (sometimes marked Return) to send the
-command to the shell. The command's output is the ID of the current user, i.e., it shows us who the 
-shell
+Type the command `whoami`, then press the Enter key (sometimes marked Return) to send the command to
+the shell. The command's output is the ID of the current user, i.e., it shows us who the shell
 thinks we are:
 
 ~~~
@@ -47,7 +43,7 @@ $ whoami
 ~~~
 {: .language-bash}
 ~~~
-{{ site.workshop_host_id}}
+yourUsername
 ~~~
 {: .output}
 
@@ -61,17 +57,15 @@ More specifically, when we type `whoami` the shell:
 Next, let's find out where we are by running a command called `pwd` (which stands for "print working
 directory"). At any moment, our **current working directory** (where we are) is the directory that
 the computer assumes we want to run commands in unless we explicitly specify something else. Here,
-the computer's response is `{{ site.workshop_host_homedir }}`, which is users
-`{{ site.workshop_host_id}}`'s  **home directory**.
-
-**Note** that the location of your home directory may differ from system to system.
+the computer's response is `{{ site.workshop_host_homedir }}/yourUsername`, which is ``yourUsername`` **home directory**.
+Note that the location of your home directory may differ from system to system.
 
 ~~~
 $ pwd
 ~~~
 {: .language-bash}
 ~~~
-{{ site.workshop_host_homedir }}
+{{ site.workshop_host_homedir }}/yourUsername
 ~~~
 {: .output}
 
@@ -123,7 +117,7 @@ $ pwd
 ```
 {: .language-bash}
 ```
-{{ site.workshop_host_homedir }}/documents
+~/documents
 ```
 {: .output}
 
@@ -133,13 +127,13 @@ if we get "lost" and want to get back to where we started?
 To go back to your home directory, the following two commands will work:
 
 ```
-$ cd {{ site.workshop_host_homedir }}
+$ cd {{ site.workshop_host_homedir }}/yourUserName
 $ cd ~
 ```
 {: .language-bash}
 
 What is the `~` character? When using the shell, `~` is a shortcut that represents
-`{{ site.workshop_host_homedir }}`.
+`{{ site.workshop_host_homedir }}/yourUserName`.
 
 A quick note on the structure of a UNIX (Linux/Mac/Android/Solaris/etc) filesystem. Directories and
 absolute paths (i.e. exact position in the system) are always prefixed with a `/`. `/` is the "root"
@@ -150,83 +144,42 @@ Let's go there now, look around, and then return to our home directory.
 ```
 $ cd /
 $ ls
+$ cd ~
 ```
 {: .language-bash}
 ```
-bin   dev  home  lib64   media  opt   root  sbin  sys  ttt  var
-boot  etc  lib   lustre  mnt    proc  run   srv   tmp  usr  work
+bin   cvmfs  etc   initrd  lib64  localscratch  mnt  opt   project  root  sbin     srv  tmp  var
+boot  dev    home  lib     local  media         nix  proc  ram      run   scratch  sys  usr  work
 ```
 {: .output}
 
 The "home" directory is the one where we generally want to keep all of our files. Other folders on a
 UNIX OS contain system files, and get modified and changed as you install new software or upgrade
 your OS.
-> ## Returing to you home directory
->
-> From the root directory please provide three different ways of getting back to your home 
->directory.
->
-> > ## Solution
-> > 
-> > 1. `cd` - Shortcut
-> > 
-> > 2. `cd ~` - Shorthand
-> > 
-> > 3. `cd {{ site.workshop_host_homedir }}` - This is the absolute path
-> {: .solution}
-{: .challenge}
-
 
 > ## Using HPC filesystems
 > On HPC systems, you have a number of places where you can store your files. These differ in both
 > the amount of space allocated and whether or not they are backed up.
-> Cavines has three different area where you can store files. Each of the different area serve 
-> different purposes. They also have different amounts of storage, and are backed up differenly as 
-> well.
 >
 > File storage locations:
 >
-> * **Home Directoy Storage** -  Each user has 20 GB of disk storage reserved for personal use on 
->   the home file system. Users' home directories are in /home (e.g., /home/1201), and the directory
->   name is put in the environment variable `$HOME` at login. The permanent file system is configured 
->   to allow nearly instantaneous, consistent snapshots. The snapshot contains the original version 
->   of the file system, and the live filesystem contains any changes made since the snapshot was 
->   taken. In addition, all your files are regularly replicated at UD's off-campus disaster recovery 
->   site. You can use read-only snapshots to revert a previous version, or request to have your files
->   restored from the disaster recovery site.
->
->   You can check to see the size and usage of your home directory with the command 
->   ```
->   df -h $HOME
->   ```
-> * **Work Group Storage** -  Each research group has at least 1000 GB of shared group (workgroup) 
->   storage in the /work directory identified by the `«investing_entity»` (e.g., /work/it_css) and is
->   referred to as your workgroup directory. This is used for input files, supporting data files, 
->   work files, and output files, source code and executables that need to be shared with your 
->   research group. Just as your home directory, read-only snapshots of workgroup's files are made 
->   several times for the passed week. In addition, the filesystem is replicated on UD's off-campus 
->   disaster recovery site. Snapshots are user-accessible, and older files may be retrieved by special 
->   request.
->
->   You can check the size and usage of your workgroup directory by using the workgroup command to 
->   spawn a new workgroup shell, which sets the environment variable `$WORKDIR` 
->   ```
->   df -h $WORKDIR
->   ```
->
-> *High-performance filesystem:*   
-> * **Lustre Storage** - User storage is available on a high-performance Lustre-based filesystem 
->   having 210 TB of usable space. This is used for temporary input files, supporting data files, 
->   work files, and output files associated with computational tasks run on the cluster. The 
->   filesystem  is accessible to all of the processor cores via Omni-path Infiniband. 
->
->   The Lustre filesystem is not backed up nor are there snapshots to recover deleted files. However,
->   it is a robust RAID-6 system. Thus, the filesystem can survive a concurrent disk failure of two
->   independent hard drives and still rebuild its contents automatically. 
->   
->   All users will use the public scratch directory (lustre/scratch). 
->   *A full system inhibits user for everyone, therefore IT staff may run cleanup procedures as needed to purge aged files or directories in 
->   /lustre/scratch if old files are degrading system performance.* 
+> * **Network filesystem** - Your home directory is an example of a network filesystem. Data stored
+>   here is available throughout the HPC system and files stored here are often backed up (but check you local configuration to be sure!). Files stored
+>   here are typically slower to access, the data is actually stored on another computer and is
+>   being transmitted and made available over the network!
+> * **Scratch** - Some systems may offer "scratch" space. Scratch space is typically faster to use
+>   than your home directory or network filesystem, but is not usually backed up, and should not be
+>   used for long term storage.
+> * **Work file system** - As an alternative to (or sometimes as well as) Scratch space, some HPC 
+>   systems offer fast file system access as a work file system. Typically, this will have 
+>   higher performance than your home directory or network file system and may not be 
+>   backed up. It differs from scratch space in that files in a work file system are not automatically
+>   deleted for you, you must manage the space yourself.
+> * **Local scratch (job only)** - Some systems may offer local scratch space while executing a job.
+>   Such storage is very fast, but will be deleted at the end of your job.
+> * **Ramdisk (job only)** - Some systems may let you store files in a "RAM disk" while running a
+>   job, where files are stored directly in the computer's memory. This extremely fast, but files
+>   stored here will count against your job's memory usage and be deleted at the end of your job.
 {: .callout}
 
 There are several other useful shortcuts you should be aware of.
@@ -247,14 +200,14 @@ $ pwd
 {: .language-bash}
 
 ```
-{{ site.workshop_host_homedir }}/documents
-{{ site.workshop_host_homedir }}
+{{ site.workshop_host_homedir }}/yourUserName/documents
+{{ site.workshop_host_homedir }}/yourUserName
 ```
 {: .output}
 
 Many commands also have multiple behaviours that you can invoke with command line 'flags.' What is a
-flag? It's generally just your command followed by a '-' or '--' and the name of the flag.
-You follow the flag(s) with any additional arguments you
+flag? It's generally just your command followed by a '-' and the name of the flag (sometimes it's
+'--' followed by the name of the flag. You follow the flag(s) with any additional arguments you
 might need.
 
 We're going to demonstrate a couple of these "flags" using `ls`.
@@ -269,23 +222,19 @@ $ ls -a
 ```
 {: .language-bash}
 ```
-.  ..  .bash_history .bash_logout  .bash_profile  .bashrc .bash_udit  documents  .ssh  
-
+.  ..  .bash_logout  .bash_profile  .bashrc  documents  .emacs  .mozilla  .ssh
 ```
 {: .output}
 
-Notice how both `.` and `..` are visible as hidden files. 
-
-To show files, their size in bytes, date last modified, permissions, and other 
-things with `-l`.
+Notice how both `.` and `..` are visible as hidden files. Show files, their size in bytes, date last
+modified, permissions, and other things with `-l`.
 
 ```
 $ ls -l
 ```
 {: .language-bash}
 ```
-drwxr-xr-x  2 traine everyone     2 Jul 13 15:48 documents
-
+drwxr-xr-x 2 yourUsername tc001 4096 Jan 14 17:31 documents
 ```
 {: .output}
 
@@ -312,15 +261,6 @@ drwxr-sr-x 2 yourUsername tc001 4096 Nov 28 09:58 documents
 -rw-r--r-- 1 yourUsername tc001  334 Mar  3  2017 .emacs
 drwxr-xr-x 4 yourUsername tc001 4096 Aug  2  2016 .mozilla
 drwx--S--- 2 yourUsername tc001 4096 Nov 28 09:58 .ssh
-
-drwx--x--x 17 traine everyone    29 Jul 21 14:22 .
-drwxr-xr-x 79 root  root         0 Jul 21 14:23 ..
--rw-------  1 traine it_css   20442 Jul 21 15:24 .bash_history
--rw-r--r--  1 traine everyone    17 Jul 25  2018 .bash_logout
--rw-r--r--  1 traine everyone   200 Jul 25  2018 .bash_profile
--rw-r--r--  1 traine everyone   384 Mar 19 15:21 .bashrc
--rw-r--r--  1 traine everyone  1154 Mar 24 10:16 .bash_udit
-drwxr-xr-x  2 traine everyone     2 Jul 13 15:48 documents
 ```
 {: .output}
 
@@ -410,7 +350,7 @@ Mandatory arguments to long options are mandatory for short options too.
 > message similar to this:
 >
 > ~~~
-> {{ site.workshop_host_prompt }}$ ls -j
+> [remote]$ ls -j
 > ~~~
 > {: .language-bash}
 > 
@@ -426,10 +366,6 @@ Mandatory arguments to long options are mandatory for short options too.
 >
 > Looking at the man page for `ls` or using `ls --help`, what does the `-h` (`--human-readable`)
 > option do?
->
-> > ## Solution
-> >  `-h, --human-readable:  with -l, print sizes in human readable format (e.g., 1K 234M 2G)`
-> {: .solution}
 {: .challenge}
 
 > ## Absolute vs Relative Paths
@@ -462,38 +398,39 @@ Mandatory arguments to long options are mandatory for short options too.
 
 > ## Relative Path Resolution
 >
-> Using the filesystem diagram below, if `pwd` displays `/home/1201/development`, what will `ls -F ../back_up`
+> Using the filesystem diagram below, if `pwd` displays `/Users/thing`, what will `ls -F ../backup`
 > display?
 >
-> 1.  `../back_up: No such file or directory`
-> 2.  `beta_v4/`
-> 3.  `2019-10-28/ 2020-01-25/ 2020-07-05/`
-> 4.  `beta_v5/ back_up/`
+> 1.  `../backup: No such file or directory`
+> 2.  `2012-12-01 2013-01-08 2013-01-27`
+> 3.  `2012-12-01/ 2013-01-08/ 2013-01-27/`
+> 4.  `original/ pnas_final/ pnas_sub/`
 >
-> ![File System for Challenge Questions](../fig/file_structure_1.png)
+> ![File System for Challenge Questions](../fig/filesystem-challenge.svg)
 >
 > > ## Solution
-> > 1. No: there *is* a directory `back_up` in `/home/1201`.
-> > 2. No: this is the content of `/home/1201/development/back_up`.
-> > 3. Yes: this is the contents of /home/1201/back_up.
-> > 4. No: this would be the contents of `/home/1201/development` or `./`.
+> > 1. No: there *is* a directory `backup` in `/Users`.
+> > 2. No: this is the content of `Users/thing/backup`,
+> >    but with `..` we asked for one level further up.
+> > 3. No: see previous explanation.
+> > 4. Yes: `../backup/` refers to `/Users/backup/`.
 > {: .solution}
 {: .challenge}
 
 > ## `ls` Reading Comprehension
 >
 > Assuming a directory structure as in the above Figure (File System for Challenge Questions), if
-> `pwd` displays `/home/1201/development`, and `-r` tells `ls` to display things in reverse order, what
+> `pwd` displays `/Users/backup`, and `-r` tells `ls` to display things in reverse order, what
 > command will display:
 >
 > ~~~
-> beta_v5/ back_up/
+> pnas_sub/ pnas_final/ original/
 > ~~~
 > {: .output}
 >
 > 1.  `ls pwd`
 > 2.  `ls -r -F`
-> 3.  `ls -r -F /home/1201/development`
+> 3.  `ls -r -F /Users/backup`
 > 4.  Either #2 or #3 above, but not #1.
 >
 > > ## Solution
@@ -534,4 +471,3 @@ Mandatory arguments to long options are mandatory for short options too.
 > > are sorted by time of last change.
 > {: .solution}
 {: .challenge}
-{% include links.md %}

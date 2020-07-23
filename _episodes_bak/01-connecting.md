@@ -1,24 +1,24 @@
 ---
-title: "Connecting to the Caviness Cluster"
+title: "Connecting to the remote HPC system"
 teaching: 20 
 exercises: 10
 questions:
 - "How do I open a terminal?"
 - "How do I connect to a remote computer?"
 objectives:
-- "Remotely connect to the Caviness Cluster"
+- "Connect to a remote HPC system."
 keypoints:
-- "Connect to the Caviness Cluster by using SSH: `ssh -Y yourUsername@caviness.hpc.udel.edu`"
+- "To connect to a remote HPC system using SSH: `ssh yourUsername@remote.computer.address`"
 ---
 
 ## Opening a Terminal
 
-Connecting to Caviness must be done through a tool known as "SSH" (Secure SHell) and
-usually it is run through a terminal. So, to begin using Caviness we need to begin by opening
+Connecting to an HPC system is most often done through a tool known as "SSH" (Secure SHell) and
+usually SSH is run through a terminal. So, to begin using an HPC system we need to begin by opening
 a terminal. Different operating systems have different terminals, none of which are exactly the same
 in terms of their features and abilities while working on the operating system. When connected to
 the remote system the experience between terminals will be identical as each will faithfully present
-the same experience of the Caviness Cluster.
+the same experience of using that system.
 
 Here is the process for opening a terminal in each operating system.
 
@@ -31,8 +31,7 @@ how to do then a quick search on the Internet for "how to open a terminal window
 particular Linux flavour appended to the end should quickly give you the directions you need.
 
 A very popular version of Linux is Ubuntu. There are many ways to open a terminal window in Ubuntu
-but a very fast way is to use the terminal shortcut key sequence:
-<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>.
+but a very fast way is to use the terminal shortcut key sequence: Ctrl+Alt+T.
 
 ### Mac
 
@@ -47,10 +46,30 @@ can find Terminal under "Utilities" in the Applications menu.
 ### Windows
 
 While Windows does have a command-line interface known as the "Command Prompt" that has its roots in
-MS-DOS (Microsoft Disk Operating System) its built-in SSH tool does not have the all the options we
-need in setting up our SSH connections. To get those additions options we will need to 
+MS-DOS (Microsoft Disk Operating System) it does not have an SSH tool built into it and so one needs
 to be installed. There are a variety of programs that can be used for this, two common ones we
 describe here, as follows:
+
+#### MobaXterm
+
+MobaXterm is a terminal window emulator for Windows and the home edition can be downloaded for free
+from [mobatek.net](https://mobaxterm.mobatek.net/download-home-edition.html). If you follow the link
+you will note that there are two editions of the home version available: Portable and Installer. The
+portable edition puts all MobaXterm content in a folder on the desktop (or anywhere else you would
+like it) so that it is easy add plug-ins or remove the software. The installer edition adds
+MobaXterm to your Windows installation and menu as any other program you might install.
+If you are not sure that you will continue to use MobaXterm in the future, the portable edition
+is likely the best choice for you.
+
+Download the version that you would like to use and install it as you would any other software on
+your Windows installation. Once the software is installed you can run it by either opening the
+folder installed with the portable edition and double-clicking on the executable file named
+`MobaXterm_Personal_11.1` (your version number may vary) or, if the installer edition was used,
+finding the executable through either the start menu or the Windows search option.
+
+Once the MobaXterm window is open you should see a large button in the middle of that window with
+the text "Start Local Terminal". Click this button and you will have a terminal window at your
+disposal.
 
 #### PuTTY
 
@@ -58,69 +77,30 @@ It is strictly speaking not necessary to have a terminal running on your local c
 access and use a remote system, only a window into the remote system once connected. PuTTy is likely
 the oldest, most well-known, and widely used software solution to take this approach.
 
-
-PuTTY is available for free download from 
-[UDeploy](https://udeploy.udel.edu/software/putty-with-xming/) or 
-[www.putty.org](http://www.putty.org/). Through the UDeploy site you will have the opttion to 
-download and install Putty, Xming, and WinSCP. It is suggested that you download and install all
-three of these programs. The download and installation process will not be cover in this lesson.
-For directions on how to download, install, and set up  PuTTY can be found in thecourse's
-Setup lesson.
+PuTTY is available for free download from [www.putty.org](http://www.putty.org/). Download the
+version that is correct for your operating system and install it as you would other software on you
+Windows system. Once installed it will be available through the start menu or similar.
 
 Running PuTTY will not initially produce a terminal but instead a window full of connection options.
 Putting the address of the remote system in the "Host Name (or IP Address)" box and either pressing
-enter or clicking the "Open" button should begin the connection process. If there is a save session
-you could alternatively "double click" a on the saved session name, or click to highlight it and 
-then click on the "Open" button to start the connection process.
+enter or clicking the "Open" button should begin the connection process.
 
 If this works you will see a terminal window open that prompts you for a username through the "login
 as:" prompt and then for a password. If both of these are passed correctly then you will be given
 access to the system and will see a message saying so within the terminal. If you need to escape the
-authentication process you can hold the Control (<kbd>ctrl</kbd>) key and press the <kbd>C</kbd> key
+authentication process you can hold the Control (<kbd>Ctrl</kbd>) key and press the <kbd>c</kbd> key
 to exit and start again.
 
-Note that you may want to paste in your password rather than typing it. Use <kbd>ctrl</kbd> plus a
+Note that you may want to paste in your password rather than typing it. Use <kbd>Ctrl</kbd> plus a
 right-click of the mouse to paste content from the clipboard to the PuTTY terminal.
 
 For those logging in with PuTTY it would likely be best to cover the terminal basics already
 mentioned above before moving on to navigating the remote system.
 
-#### XMing
-
-Xming is an X11 display server for Microsoft Windows operating systems, for Windows XP and 
-later. It can be installed to allow a GUI launched from the Caviness on to display on your Windows
-computer. This will allow you to interact with program's GUI, such as Matlab, or view images of 
-results such as charts or tables. The download and installation process will not be cover in this
-lesson. For directions on how to download, install, and set up  XMing can be found in thecourse's
-Setup lesson.
-
-[comment]: <>#### MobaXterm
-
-[comment]: <> MobaXterm is a terminal window emulator for Windows and the home edition can be downloaded for free
-[comment]: <> from [mobatek.net](https://mobaxterm.mobatek.net/download-home-edition.html). If you follow the link
-[comment]: <> you will note that there are two editions of the home version available: Portable and Installer. The
-[comment]: <> portable edition puts all MobaXterm content in a folder on the desktop (or anywhere else you would
-[comment]: <> like it) so that it is easy add plug-ins or remove the software. The installer edition adds
-[comment]: <> MobaXterm to your Windows installation and menu as any other program you might install.
-[comment]: <> If you are not sure that you will continue to use MobaXterm in the future, the portable edition
-[comment]: <> is likely the best choice for you.
-
-[comment]: <> Download the version that you would like to use and install it as you would any other software on
-[comment]: <> your Windows installation. Once the software is installed you can run it by either opening the
-[comment]: <> folder installed with the portable edition and double-clicking on the executable file named
-[comment]: <> `MobaXterm_Personal_11.1` (your version number may vary) or, if the installer edition was used,
-[comment]: <> finding the executable through either the start menu or the Windows search option.
-
-[comment]: <> Once the MobaXterm window is open you should see a large button in the middle of that window with
-[comment]: <> the text \"Start Local Terminal\". Click this button and you will have a terminal window at your
-[comment]: <> disposal.
-
-[comment]: <> Details about installing a setting MobaXterm will not be covered in this workshop.
-
 ## Logging onto the system
 
-With all of this in mind, let's make a remote connection. In this workshop, we will connect to
-{{ site.workshop_host }} --- which is one of three comminuty clusters at {{ site.workshop_host_location }}. Although it's unlikely
+With all of this in mind, let's connect to a remote HPC system. In this workshop, we will connect to
+{{ site.workshop_host }} --- an HPC system located at the {{ site.workshop_host_location }}. Although it's unlikely
 that every system will be exactly like {{ site.workshop_host }}, it's a very good example of what you can expect from
 an HPC installation. To connect to our example computer, we will use SSH (if you are using
 PuTTY, see above).
@@ -145,7 +125,7 @@ don't worry! We will cover things in depth as we explore the system further.)
 ```{.output}
 {{ site.workshop_host_prompt }}
 ```
-*Note that Caviness has two login node `login00` and `login01`. The above output could reflect either node.*
+
 ## Telling the Difference between the Local Terminal and the Remote Terminal
 
 You may have noticed that the prompt changed when you logged into the remote system using the
@@ -175,4 +155,3 @@ adopt the following convention:
 > above when you see a change from `[local]$` to `{{ site.workshop_host_prompt }}` and disconnect when you see the
 > reverse.
 {: .callout}
-{% include links.md %}

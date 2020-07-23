@@ -46,8 +46,6 @@ Let's make a new file now, type whatever you want in it, and save it.
 ```
 $ nano draft.txt
 ```
-Add the following text `It's not "publish or perish" anymore, it's "share and thrive.`
-
 {: .language-bash}
 
 ![Nano in action]({{ site.url }}{{ site.baseurl }}/fig/nano-screenshot.png)
@@ -69,7 +67,6 @@ Here are the shortcut keys for a few common actions:
 * <kbd>Ctrl</kbd>+<kbd>U</kbd> --- paste the cut text line (or lines).
   This command can be repeated to paste the same text elsewhere.
 
-Now save  your file and close nano.
 
 > ## Using `vim` as a text editor
 >
@@ -84,8 +81,7 @@ Now save  your file and close nano.
 > should be aware of:
 >
 > * `:q!` --- quit, without saving
-> 
-* `:wq` --- save and quit
+> * `:wq` --- save and quit
 > * `dd` --- cut/delete a line
 > * `y` --- paste a line
 {: .callout}
@@ -102,19 +98,6 @@ draft.txt
 ```
 {: .output}
 
-Another way to create a file is with the `touch` command. The `touch` command is a simple way to
-create a empty file or to update the modified time of a file that already exists. 
-
-```
-$ touch draft2.txt
-$ ls
-```
-{: .language-bash}
-
-```
-draft2.txt  draft.txt
-```
-{: .output}
 
 ## Reading Files
 
@@ -156,17 +139,6 @@ it's "share and thrive".
 > Create two more files using `nano`, giving them different names such as `chap1.txt` and
 > `chap2.txt`. Then use a single `cat` command to read and print the contents of `draft.txt`,
 > `chap1.txt`, and `chap2.txt`.
->
-> > ## Solution
-> > ```
-> > $ cat draft.txt chap1.txt chap2.txt
-> > It's not "publish  or perish" any more,
-> > it's "share and thrive".
-> > This is chap1.txt
-> > This is chap2.txt
-> > ```
-> > {: .output}
-> {: .solution}
 {: .challenge}
 
 
@@ -224,8 +196,7 @@ newname.testfile
 > it is. Changing the name or extension of the file will *never* change a file's contents, so you
 > are free to rename things as you wish. With that in mind, however, file extensions are a useful
 > tool for keeping track of what type of data it contains. A `.txt` file typically contains text,
-> for instance. The extensions my also be used by other applications to help interpret the files
-> contents. For example changing `.mp3` to `.txt` might make the file unreadable to a music player. 
+> for instance.
 {: .callout}
 
 **Copying**---What if we want to copy a file, instead of simply renaming or moving it?
@@ -252,13 +223,11 @@ files documents newname.testfile
 {: .output}
 
 ## Removing files
-> ## Warning About Removing Files
->
-> We've begun to clutter up our workspace with all of the directories and files we've been making.
-> Let's learn how to get rid of them. One important note before we start... **when you delete a file
-> on UNIX systems, they are gone *forever***. There is no "recycle bin" or "trash". Once a file is
-> deleted, it is gone, never to return. So be *very* careful when deleting files.
-{: .callout}
+
+We've begun to clutter up our workspace with all of the directories and files we've been making.
+Let's learn how to get rid of them. One important note before we start... **when you delete a file
+on UNIX systems, they are gone *forever***. There is no "recycle bin" or "trash". Once a file is
+deleted, it is gone, never to return. So be *very* careful when deleting files.
 
 Files are deleted with `rm file [moreFiles]`. To delete the `newname.testfile` in our current
 directory:
@@ -326,9 +295,6 @@ Let's grab and unpack a set of demo files for use later. To do this, we'll use `
 downloads a file from a link).
 
 ```
-$ cd ~
-$ mkdir lesson_files
-$ cd lession_files
 $ wget {{site.url}}{{site.baseurl}}/files/bash-lesson.tar.gz
 ```
 {: .language-bash}
@@ -384,11 +350,7 @@ too quickly! What are the alternatives? Try all of these out and see which ones 
 - `head file`: Print the top 10 lines in a file to the console. You can control the number of lines
   you see with the `-n numberOfLines` flag.
 - `tail file`: Same as `head`, but prints the last 10 lines in a file to the console.
-- `less  file`: Opens a file and display as much as possible on-screen. You can scroll with `Enter`
-  or the up and down arrow keys on your keyboard. Press `q` to close the viewer.
-- `more file`: Opens a file and display as much as possible on-screen. You can scroll with `Enter`
+- `less file`: Opens a file and display as much as possible on-screen. You can scroll with `Enter`
   or the arrow keys on your keyboard. Press `q` to close the viewer.
 
-Out of `cat`, `head`, `tail`, `more`, and `less`, which method of reading files is your favourite? Why?
-
-{% include links.md %}
+Out of `cat`, `head`, `tail, and `less`, which method of reading files is your favourite? Why?

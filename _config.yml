@@ -10,11 +10,11 @@
 carpentry: "swc"
 
 # Overall title for pages.
-title: "Introduction to Using the Shell in a High-Performance Computing Context"
+title: "Introduction to the Unix Shell on UD's Caviness Cluster"
 
 # Life cycle stage of the lesson
 # possible values: "pre-alpha", "alpha", "beta", "stable"
-life_cycle: "alpha"
+life_cycle: "pre-alpha"
 
 #------------------------------------------------------------
 # Generic settings (should not need to change).
@@ -29,7 +29,7 @@ kind: "lesson"
 repository: <USERNAME>/<PROJECT>
 
 # Email address, no mailto:
-email: "team@carpentries.org"
+email: "mkyle@udel.edu"
 
 # Sites.
 amy_site: "https://amy.software-carpentry.org/workshops"
@@ -109,13 +109,14 @@ highlighter: rouge
 # * workshop_host_homedir - The location of the home directory on the remote host
 #
 # Example: Graham cluster at Compute Canada, University of Waterloo
-workshop_host: "Graham"
-workshop_host_id: "ComputeCanada_Graham"
-workshop_host_login: "graham.computecanada.ca"
-workshop_host_location: "University of Waterloo"
-workshop_host_prompt: "[yourUsername@gra-login1 ~]$ "
-workshop_host_homedir: "/home"
-workshop_sched_id: "ComputeCanada_Graham_slurm"
+workshop_host: "Caviness"
+workshop_host_id: "traine"
+workshop_host_login: "caviness.hpc.udel.edu"
+workshop_host_location: "University of Delaware"
+workshop_host_prompt: "[traine@login00 ~]$ "
+workshop_host_homedir: "/home/1201"
+workshop_sched_id: "traine@r00n56"
+#workshop_sched_id: "ComputeCanada_Graham_slurm"
 # Example: Cirrus at EPCC, The University of Edinburgh
 # workshop_host: "Cirrus"
 # workshop_host_id: "EPCC_Cirrus"
@@ -124,5 +125,5 @@ workshop_sched_id: "ComputeCanada_Graham_slurm"
 # workshop_host_prompt: "[yourUsername@cirrus-login0 ~]$ "
 # workshop_host_homedir: "/lustre/home/tc001"
 
-# Costum host location
-host: 192.168.123.25
+# Costum host location THIS SHOULD BE REMOVED BEFORE BEING PUT INTO PRODUCTION
+host: 192.168.123.114

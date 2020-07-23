@@ -25,16 +25,7 @@ keypoints:
 >
 > **Using a web browser** ---
 > [{{site.url}}{{site.baseurl}}/files/bash-lesson.tar.gz]({{site.url}}{{site.baseurl}}/files/bash-lesson.tar.gz)
->
-> ```
-> $ cd ~
-> $ mkdir lesson_files
-> $ cd lession_files
-> $ wget {{site.url}}{{site.baseurl}}/files/bash-lesson.tar.gz
-> $ tar -xvf bash-lesson.tar.gz
-> ```
-> {: .language-bash}
-{: .checklist}
+{: .testimonial}
 
 Now that we know some of the basic UNIX commands, we are going to explore some more advanced
 features. The first of these features is the wildcard `*`. In our examples before, we've done things
@@ -179,46 +170,21 @@ filename you specify on the right of the arrow. The actual syntax looks like `co
 Let's try several basic usages of `>`. `echo` simply prints back, or echoes whatever you type after
 it.
 
-
 ```
 $ echo "this is a test"
-```
-{: .language-bash}
-
-```
-this is a test
-$
-```
-{: .output}
-
-```
 $ echo "this is a test" > test.txt
-```
-{: .language-bash}
-
-```
-   # This is empty because the output was directed into the test.txt file.
-```
-{: .output}
-
-```
 $ ls
-```
-{: .language-bash}
-
-```
-bash-lesson.tar.gz                           fastq
-dmel-all-r6.19.gtf                           gene_association.fb
-dmel_unique_protein_isoforms_fb_2016_01.tsv  test.txt
-```
-{: .output}
-
-```
 $ cat test.txt
 ```
 {: .language-bash}
 
 ```
+this is a test
+
+bash-lesson.tar.gz                           fastq
+dmel-all-r6.19.gtf                           gene_association.fb
+dmel_unique_protein_isoforms_fb_2016_01.tsv  test.txt
+
 this is a test
 ```
 {: .output}
@@ -227,18 +193,12 @@ Awesome, let's try that with a more complicated command, like `wc -l`.
 
 ```
 $ wc -l * > word_counts.txt
-```
-{: .language-bash}
-```
-wc: fastq: Is a directory
-```
-{: .output}
-
-```
 $ cat word_counts.txt
 ```
 {: .language-bash}
 ```
+wc: fastq: Is a directory
+
     53037 bash-lesson.tar.gz
    542048 dmel-all-r6.19.gtf
     22129 dmel_unique_protein_isoforms_fb_2016_01.tsv
@@ -368,19 +328,13 @@ from that file.
 
 > ## Writing commands using pipes
 >
-> What command will tell how many files are there in the "fastq" directory? How many are there? (Use the shell to do this.)
+> How many files are there in the "fastq" directory we made earlier? (Use the shell to do this.)
 > > ## Solution
 > > 
 > > ```
 > > ls fastq/ | wc -l
 > > ```
 > > {: .language-bash}
-> > ```
-> > 16
-> > ```
-> > {: .output}
-> >
-> >
 > > 
 > > Output of `ls` is one line per item so counting lines gives the number of files.
 > {: .solution}
@@ -408,4 +362,3 @@ from that file.
 > > The `head` command without any options shows the first 10 lines of a file
 > {: .solution}
 {: .challenge}
-{% include links.md %}
