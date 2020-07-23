@@ -127,3 +127,5 @@ workshop_sched_id: "traine@r00n56"
 
 # Costum host location THIS SHOULD BE REMOVED BEFORE BEING PUT INTO PRODUCTION
 host: 192.168.123.114
+
+theme: jekyll-theme-cayman
