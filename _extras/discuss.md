@@ -1,6 +1,6 @@
 ---
 title: Discussion
 ---
-FIXME
+FIXME I think this is the glossary?
 
 {% include links.md %}
