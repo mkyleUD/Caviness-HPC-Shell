@@ -20,8 +20,8 @@ keypoints:
 ---
 
 ## What is the Caviness Cluster?
-The Caviness cluster is named in honor of Jane Caviness, the former directo of Axademic Computing
-Servies at the University of Delaware. In the 1980's, Caviness led a ground breaking expansion of
+The Caviness cluster is named in honor of Jane Caviness, the former director of Academic Computing
+Services at the University of DelawareIn the 1980's, Caviness led a ground breaking expansion of
 UD's computing resources and network infrastucture that laid the foundation for UD's current
 research computing capabilites. 
 

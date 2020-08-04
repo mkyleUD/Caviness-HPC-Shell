@@ -13,12 +13,12 @@ keypoints:
 
 ## Opening a Terminal
 
-Connecting to Caviness must be done through a tool known as "SSH" (Secure SHell) and
-usually it is run through a terminal. So, to begin using Caviness we need to begin by opening
+Connecting to  {{ site.workshop_host }} must be done through a tool known as "SSH" (Secure SHell) and
+usually it is run through a terminal. So, to begin using  {{ site.workshop_host }} we need to begin by opening
 a terminal. Different operating systems have different terminals, none of which are exactly the same
 in terms of their features and abilities while working on the operating system. When connected to
 the remote system the experience between terminals will be identical as each will faithfully present
-the same experience of the Caviness Cluster.
+the same experience of the  {{ site.workshop_host }}  Cluster.
 
 Here is the process for opening a terminal in each operating system.
 
@@ -80,7 +80,7 @@ authentication process you can hold the Control (<kbd>ctrl</kbd>) key and press 
 to exit and start again.
 
 Note that you may want to paste in your password rather than typing it. Use <kbd>ctrl</kbd> plus a
-right-click of the mouse to paste content from the clipboard to the PuTTY terminal.
+right-click of the mouse or use <kbd>shift</kbd> + <kbd>insert</kbd> to paste content from the clipboard to the PuTTY terminal.
 
 For those logging in with PuTTY it would likely be best to cover the terminal basics already
 mentioned above before moving on to navigating the remote system.
@@ -88,7 +88,7 @@ mentioned above before moving on to navigating the remote system.
 #### XMing
 
 Xming is an X11 display server for Microsoft Windows operating systems, for Windows XP and 
-later. It can be installed to allow a GUI launched from the Caviness on to display on your Windows
+later. It can be installed to allow a GUI launched from the  {{ site.workshop_host }} on to display on your Windows
 computer. This will allow you to interact with program's GUI, such as Matlab, or view images of 
 results such as charts or tables. The download and installation process will not be cover in this
 lesson. For directions on how to download, install, and set up  XMing can be found in thecourse's
@@ -145,7 +145,7 @@ don't worry! We will cover things in depth as we explore the system further.)
 ```{.output}
 {{ site.workshop_host_prompt }}
 ```
-*Note that Caviness has two login node `login00` and `login01`. The above output could reflect either node.*
+*Note that  {{ site.workshop_host }} has two login node `login00` and `login01`. The above output could reflect either node.*
 ## Telling the Difference between the Local Terminal and the Remote Terminal
 
 You may have noticed that the prompt changed when you logged into the remote system using the

@@ -22,7 +22,7 @@ keypoints:
 At the point in this lesson, we've just logged into the system. Nothing has happened yet, and we're
 not going to be able to do anything until we learn a few basic commands. In this lesson we will talk
 about `ls`, `cd`, and a few other commands. This commands will help you navigate around not only the
-Caviness File structure but nearly any Linux/Unix File system using the CLI. 
+ {{ site.workshop_host }} File structure but nearly any Linux/Unix File system using the CLI. 
 
 Right now, all we see is something that looks like this:
 
