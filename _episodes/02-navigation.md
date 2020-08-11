@@ -161,7 +161,7 @@ boot  etc  lib   lustre  mnt    proc  run   srv   tmp  usr  work
 The "home" directory is the one where we generally want to keep all of our files. Other folders on a
 UNIX OS contain system files, and get modified and changed as you install new software or upgrade
 your OS.
-> ## Returing to you home directory
+> ## Returning to your home directory
 >
 > From the root directory please provide three different ways of getting back to your home 
 >directory.

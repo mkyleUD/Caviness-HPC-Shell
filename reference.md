@@ -302,4 +302,10 @@ wildcard
   * Vim also has a built-in tutorial. From the bash prompt, type `vimtutor`
     and follow the instructions.
 
+### Helpful Resources
+* [Explain Shell](https://explainshell.com/) is a website that can dissect any shell command and any passed options and 
+  display helpful information it. 
+
+* [Shell Check](https://shellcheck.net) is a website that will check a shell script for common errors. It can be done by manually typing 
+  the script or by uploading a script to the site.
 
