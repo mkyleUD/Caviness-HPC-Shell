@@ -19,9 +19,9 @@ keypoints:
 - "Hit the <kbd>TAB</kbd> key to autocomplete whatever you're currently typing."
 ---
 
-At the point in this lesson, we've just logged into the system. Nothing has happened yet, and we're
+At this point in the lesson, we've just logged into the system. Nothing has happened yet, and we're
 not going to be able to do anything until we learn a few basic commands. In this lesson we will talk
-about `ls`, `cd`, and a few other commands. This commands will help you navigate around not only the
+about `ls`, `cd`, and a few other commands. These commands will help you navigate around not only the
  {{ site.workshop_host }} File structure but nearly any Linux/Unix File system using the CLI. 
 
 Right now, all we see is something that looks like this:
@@ -32,8 +32,8 @@ Right now, all we see is something that looks like this:
 {: .language-bash}
 
 The dollar sign is a **prompt**, which shows us that the shell is waiting for input. If you do not 
-see the dollar sign then the system is not ready for your next input. This applies for the duration
-of your session. Later on we will talk about what happens if enter a command and a `$` prompt does
+see the dollar sign, then the system is not ready for your next input. This applies for the duration
+of your session. Later, we will talk about what happens if a command is entered and a `$` prompt does
 not return to your screen. When typing commands, either from these lessons or from other sources,
 **do not type** the prompt `$`, only the commands that follow it.
 
@@ -61,7 +61,7 @@ More specifically, when we type `whoami` the shell:
 Next, let's find out where we are by running a command called `pwd` (which stands for "print working
 directory"). At any moment, our **current working directory** (where we are) is the directory that
 the computer assumes we want to run commands in unless we explicitly specify something else. Here,
-the computer's response is `{{ site.workshop_host_homedir }}`, which is users
+the computer's response is `{{ site.workshop_host_homedir }}`, which is user
 `{{ site.workshop_host_id}}`'s  **home directory**.
 
 **Note** that the location of your home directory may differ from system to system.
@@ -95,7 +95,7 @@ arranged neatly into columns.
 > > Applications Documents    Library      Music        Public
 > > Desktop      Downloads    Movies       Pictures
 > > ~~~
-> > In addition you should also note that the preamble before the prompt (`$`) is different. This is
+> > In addition, you should also note that the text before the prompt (`$`) is different. This is
 > > very important for making sure you know what system you are issuing commands on when in the shell.
 > {: .solution}
 {: .challenge}
@@ -179,14 +179,14 @@ your OS.
 
 > ## Using HPC filesystems
 > On HPC systems, you have a number of places where you can store your files. These differ in both
-> the amount of space allocated and whether or not they are backed up.
-> Cavines has three different area where you can store files. Each of the different area serve 
-> different purposes. They also have different amounts of storage, and are backed up differenly as 
+> the amount of space allocated and whether they are backed up or not.
+> Caviness has three different area where you can store files. Each of the different area serve 
+> different purposes. They also have different amounts of storage and are backed up differently as 
 > well.
 >
 > File storage locations:
 >
-> * **Home Directoy Storage** -  Each user has 20 GB of disk storage reserved for personal use on 
+> * **Home Directory Storage** -  Each user has 20 GB of disk storage reserved for personal use on 
 >   the home file system. Users' home directories are in /home (e.g., /home/1201), and the directory
 >   name is put in the environment variable `$HOME` at login. The permanent file system is configured 
 >   to allow nearly instantaneous, consistent snapshots. The snapshot contains the original version 
@@ -217,7 +217,7 @@ your OS.
 > *High-performance filesystem:*   
 > * **Lustre Storage** - User storage is available on a high-performance Lustre-based filesystem 
 >   having 210 TB of usable space. This is used for temporary input files, supporting data files, 
->   work files, and output files associated with computational tasks run on the cluster. The 
+>   work files, and output files associated with computational tasks ran on the cluster. The 
 >   filesystem  is accessible to all of the processor cores via Omni-path Infiniband. 
 >
 >   The Lustre filesystem is not backed up nor are there snapshots to recover deleted files. However,
@@ -475,7 +475,7 @@ Mandatory arguments to long options are mandatory for short options too.
 > > ## Solution
 > > 1. No: there *is* a directory `back_up` in `/home/1201`.
 > > 2. No: this is the content of `/home/1201/development/back_up`.
-> > 3. Yes: this is the contents of /home/1201/back_up.
+> > 3. Yes: this is the contents of `/home/1201/back_up`.
 > > 4. No: this would be the contents of `/home/1201/development` or `./`.
 > {: .solution}
 {: .challenge}

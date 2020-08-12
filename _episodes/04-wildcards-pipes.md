@@ -42,7 +42,7 @@ to files one at a time and otherwise had to specify things explicitly. The `*` c
 speed things up and do things across multiple files.
 
 Ever wanted to move, delete, or just do "something" to all files of a certain type in a directory?
-`*` lets you do that, by taking the place of one or more characters in a piece of text. So `*.txt`
+`*` lets you do that, by taking the place of zero or more characters in a piece of text. So `*.txt`
 would be equivalent to all `.txt` files in a directory for instance. `*` by itself means all files.
 Let's use our example data to see what I mean.
 
@@ -299,7 +299,7 @@ wc: fastq: Is a directory
 
 Success! The `wc: fastq: Is a directory` error message was written to the file. Also, note how the
 file was silently overwritten by directing output to the same place as before. Sometimes this is not
-the behaviour we want. How do we append (add) to a file instead of overwriting it?
+the behavior we want. How do we append (add) to a file instead of overwriting it?
 
 Appending to a file is done the same was as redirecting output. However, instead of `>`, we will use
 `>>`.

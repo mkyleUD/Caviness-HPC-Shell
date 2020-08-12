@@ -16,7 +16,7 @@ keypoints:
 Connecting to  {{ site.workshop_host }} must be done through a tool known as "SSH" (Secure SHell) and
 usually it is run through a terminal. So, to begin using  {{ site.workshop_host }} we need to begin by opening
 a terminal. Different operating systems have different terminals, none of which are exactly the same
-in terms of their features and abilities while working on the operating system. When connected to
+in terms of their features and abilities while working on the local operating system. When connected to
 the remote system the experience between terminals will be identical as each will faithfully present
 the same experience of the  {{ site.workshop_host }}  Cluster.
 
@@ -24,11 +24,11 @@ Here is the process for opening a terminal in each operating system.
 
 ### Linux
 
-There are many different versions (aka "flavours") of Linux and how to open a terminal window can
-change between flavours. Fortunately most Linux users already know how to open a terminal window
+There are many different versions (aka "flavors") of Linux and how to open a terminal window can
+change between flavors. Fortunately, most Linux users already know how to open a terminal window
 since it is a common part of the workflow for Linux users. If this is something that you do not know
 how to do then a quick search on the Internet for "how to open a terminal window in" with your
-particular Linux flavour appended to the end should quickly give you the directions you need.
+particular Linux flavor appended to the end should quickly give you the directions you need.
 
 A very popular version of Linux is Ubuntu. There are many ways to open a terminal window in Ubuntu
 but a very fast way is to use the terminal shortcut key sequence:
@@ -47,10 +47,10 @@ can find Terminal under "Utilities" in the Applications menu.
 ### Windows
 
 While Windows does have a command-line interface known as the "Command Prompt" that has its roots in
-MS-DOS (Microsoft Disk Operating System) its built-in SSH tool does not have the all the options we
-need in setting up our SSH connections. To get those additions options we will need to 
-to be installed. There are a variety of programs that can be used for this, two common ones we
-describe here, as follows:
+MS-DOS (Microsoft Disk Operating System) its built-in SSH tool does not have all the options we
+need in setting up our SSH connections. To get those additional options we will need to install 
+some 3rd party applications. There are a variety of programs that can be used. Below we will go 
+into the details of two more common ones.
 
 #### PuTTY
 
@@ -61,11 +61,11 @@ the oldest, most well-known, and widely used software solution to take this appr
 
 PuTTY is available for free download from 
 [UDeploy](https://udeploy.udel.edu/software/putty-with-xming/) or 
-[www.putty.org](http://www.putty.org/). Through the UDeploy site you will have the opttion to 
+[www.putty.org](http://www.putty.org/). Through the UDeploy site you will have the option to 
 download and install Putty, Xming, and WinSCP. It is suggested that you download and install all
-three of these programs. The download and installation process will not be cover in this lesson.
-For directions on how to download, install, and set up  PuTTY can be found in thecourse's
-Setup lesson.
+three of these programs. The download and installation process will not be covered in this lesson.
+For directions on how to download, install, and set up  PuTTY can be found in the course's
+[setup lesson]({{site.url}}{{site.baseurl}}/setup).
 
 Running PuTTY will not initially produce a terminal but instead a window full of connection options.
 Putting the address of the remote system in the "Host Name (or IP Address)" box and either pressing
@@ -88,11 +88,11 @@ mentioned above before moving on to navigating the remote system.
 #### XMing
 
 Xming is an X11 display server for Microsoft Windows operating systems, for Windows XP and 
-later. It can be installed to allow a GUI launched from the  {{ site.workshop_host }} on to display on your Windows
-computer. This will allow you to interact with program's GUI, such as Matlab, or view images of 
-results such as charts or tables. The download and installation process will not be cover in this
-lesson. For directions on how to download, install, and set up  XMing can be found in thecourse's
-Setup lesson.
+later. It can be installed to allow a GUI launched from  {{ site.workshop_host }} to display on your Windows
+computer. This will allow you to interact with a program's GUI, such as Matlab, or view images of 
+results such as charts or tables. The download and installation process will not be covered in this
+lesson. For directions on how to download, install, and set up  XMing can be found in the course's
+[setup lesson]({{site.url}}{{site.baseurl}}/setup).
 
 [comment]: <>#### MobaXterm
 
@@ -120,13 +120,13 @@ Setup lesson.
 ## Logging onto the system
 
 With all of this in mind, let's make a remote connection. In this workshop, we will connect to
-{{ site.workshop_host }} --- which is one of three comminuty clusters at {{ site.workshop_host_location }}. Although it's unlikely
+{{ site.workshop_host }} --- which is one of three community clusters at {{ site.workshop_host_location }}. Although it's unlikely
 that every system will be exactly like {{ site.workshop_host }}, it's a very good example of what you can expect from
 an HPC installation. To connect to our example computer, we will use SSH (if you are using
 PuTTY, see above).
 
 SSH allows us to connect to UNIX computers remotely, and use them as if they were our own. The
-general syntax of the connection command follows the format `ssh yourUsername@some.computer.address`
+general syntax of the connection command follows the format `ssh yourUsername@some.computer.address`.
 Let's attempt to connect to the HPC system now:
 
 ```

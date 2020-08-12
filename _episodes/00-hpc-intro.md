@@ -13,7 +13,7 @@ other Clusters Here at Universtiy of Delaware"
 keypoints:
 - "Caviness is like other HPC Systems but does  use a custom program (VALET) for setting up the 
    computing environment."
-- "Caviness and HPC systems can be used to do work that would either be impossible or much slower or
+- "Caviness and HPC systems can be used to do work that would either be impossible or much slower on
   smaller systems."
 - "The standard method of interacting with such systems is via a command line interface such as
   Bash."
@@ -21,16 +21,16 @@ keypoints:
 
 ## What is the Caviness Cluster?
 The Caviness cluster is named in honor of Jane Caviness, the former director of Academic Computing
-Services at the University of DelawareIn the 1980's, Caviness led a ground breaking expansion of
-UD's computing resources and network infrastucture that laid the foundation for UD's current
-research computing capabilites. 
+Services at the University of Delaware. In the 1980's, Jane Caviness led a groundbreaking expansion
+of UD's computing resources and network infrastructure that laid the foundation for UD's current
+research computing capabilities. 
 
-Caviness is Univeristy of Delaware's (UD) third community cluster. It was deployed in July 2018 and 
+Caviness is University of Delaware's (UD) third community cluster. It was deployed in July 2018 and 
 is a distributed-memory Linux cluster. It is based on a rolling-upgradeable model for expansion and 
 replacement of hardware over time. The first generation consists of 126 compute nodes 
 (4536 cores, 24.6 TB memory). The nodes are built of Intel “Broadwell” 18-core processors in a 
 dual-socket configuration for 36-cores per node. An OmniPath network fabric supports high-speed 
-communication and the Lustre filesystem (approx 200 TiB of usable space). Gigabit and 10-Gigabit 
+communication and the Lustre filesystem (approximately 200 TB of usable space). Gigabit and 10-Gigabit 
 Ethernet networks provide access to additional filesystems and the campus network. The cluster was 
 purchased with a proposed 5 year life to the first generation hardware, putting its refresh in the 
 April 2023 to June 2023 time period. 
@@ -81,8 +81,8 @@ Using a cluster often has the following advantages for researchers:
 * **Efficiency.** Many HPC systems operate a pool of resources that are drawn on by a many users. 
   In most cases when the pool is large and diverse enough the resources on the system are used 
   almost constantly.
-* **Cost.** Bulk purchasing and government funding mean that the cost to the research community for
-  using these systems in significantly less that it would be otherwise.
+* **Cost.** Bulk purchasing and government funding means that the cost to the research community for
+  using these systems is significantly less than it would be otherwise.
 * **Convenience.** Maybe your calculations just take a long time to run or are otherwise
   inconvenient to run on your personal computer. There's no need to tie up your own computer for
   hours when you can use someone else's instead.
@@ -106,7 +106,7 @@ continue to use VALET, just as Mills and Farber have used. VALET is a recursive 
 Automates Linux Environment Tasks – is an alternative that strives to be as simple as possible to
 configure and to use. VALET is unique to UD, if you have used another HPC system you might be 
 familiar with Environment Modules Package, more commonly known as modules. VALET and modules 
-essential perform the same services each have different syntax in doing so. More details on VALET 
+essentially perform the same services, but each have different syntax in doing so. More details on VALET 
 will be coming later on in the course.
 
 ## On Command Line
@@ -114,8 +114,8 @@ will be coming later on in the course.
 Using Caviness like most HPC systems involves the use of a shell through a command line interface 
 (CLI) and either specialized software or programming techniques. The shell is a program with the 
 special role of having the job of running other programs rather than doing calculations or similar
-tasks itself. What the user types goes into the shell, which then figures out what commands to run
-and orders the computer to execute them. (Note that the shell is called "the shell" because it 
+tasks itself. Whatever the user types, is passed to the shell, which then figures out what commands
+to run and orders the computer to execute them. (Note that the shell is called "the shell" because it 
 encloses the operating system in order to hide some of its complexity and make it simpler to 
 interact with.) The most popular Unix shell is Bash, the Bourne Again SHell (so-called because it's
 derived from a shell written by Stephen Bourne). Bash is the default shell on most modern 
