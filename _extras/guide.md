@@ -77,9 +77,7 @@ on how to access or install terminal applications can be found in the
 lessons [setup page]({{site.url}}{{site.baseurl}}/setup). Learners may also want to bring something
 to write with and on. 
 
-
-
-## Teaching Online Lessons Notes ##
+## Teaching Online Lessons Notes
 For the online format interactions and sharing of information can have its challenges. Online formats 
 benefit from having two or more instructors. One who is the presenter, and the other(s) are helpers.
 The use of software like `Zoom` and `Google Docs` or other similar software, help to create a virtual
@@ -96,6 +94,16 @@ Creating and sharing a `Google Doc` with the learners and the instructor is a gr
 track attendance for each lesson. Having this open to everyone, instructors and learners creates a great form 
 for people to add notes, ask questions, and respond to exercises. This document can also be left online 
 after the lesson has ended so learners can access and review information as needed.
+
+## Online Teaching Resources 
+### Video Chat
+ *  Google Hangout
+ *  Zoom
+ 
+
+### Collaborating Text Resources
+ *  Etherpad
+ *  Google Docs
 
 > ## Important Note
 >
