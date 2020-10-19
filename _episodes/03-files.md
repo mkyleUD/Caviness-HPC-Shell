@@ -154,7 +154,7 @@ it's "share and thrive".
 > ## Reading Multiple Text Files
 >
 > Create two more files using `nano`, giving them different names such as `chap1.txt` and
-> `chap2.txt`. Then use a single `cat` command to read and print the contents of `draft.txt`,
+> `chap2.txt`. Add unquie text into them such as "This is chap1.txt" and "This is chap2.txt" repectively.  Then use a single `cat` command to read and print the contents of `draft.txt`,
 > `chap1.txt`, and `chap2.txt`.
 >
 > > ## Solution
@@ -317,7 +317,7 @@ permission to delete. So when deleting directories be very, very careful.
 
 ## Looking at files
 
-Sometimes it's not practical to read an entire file with `cat`- the file might be way too large,
+Sometimes it's not practical to read an entire file with `cat` the file might be way too large,
 take a long time to open, or maybe we want to only look at a certain part of the file. As an
 example, we are going to look at a large and complex file type used in bioinformatics- a .gtf file.
 The GTF2 format is commonly used to describe the location of genetic features in a genome.
@@ -328,7 +328,7 @@ downloads a file from a link).
 ```
 $ cd ~
 $ mkdir lesson_files
-$ cd lession_files
+$ cd lesson_files
 $ wget {{site.url}}{{site.baseurl}}/files/bash-lesson.tar.gz
 ```
 {: .language-bash}

@@ -29,7 +29,7 @@ keypoints:
 > ```
 > $ cd ~
 > $ mkdir lesson_files
-> $ cd lession_files
+> $ cd lesson_files
 > $ wget {{site.url}}{{site.baseurl}}/files/bash-lesson.tar.gz
 > $ tar -xvf bash-lesson.tar.gz
 > ```

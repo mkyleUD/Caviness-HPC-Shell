@@ -1,5 +1,5 @@
 ---
-title: "What is the Caviness Cluster?"
+title: "What is the Caviness Cluster and Why Should You Use it?"
 teaching: 25
 exercises: 5
 questions:

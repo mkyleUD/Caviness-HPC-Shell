@@ -253,7 +253,7 @@ $ pwd
 {: .output}
 
 Many commands also have multiple behaviours that you can invoke with command line 'flags.' What is a
-flag? It's generally just your command followed by a '-' or '--' and the name of the flag.
+flag? It's generally just your command followed by a `-` or `--` and the name of the flag.
 You follow the flag(s) with any additional arguments you
 might need.
 
@@ -303,16 +303,6 @@ $ ls -l -a
 ```
 {{ site.workshop_host_prompt }} ls -la
 total 36
-drwx--S--- 5 yourUsername tc001 4096 Nov 28 09:58 .
-drwxr-x--- 3 root         tc001 4096 Nov 28 09:40 ..
--rw-r--r-- 1 yourUsername tc001   18 Dec  6  2016 .bash_logout
--rw-r--r-- 1 yourUsername tc001  193 Dec  6  2016 .bash_profile
--rw-r--r-- 1 yourUsername tc001  231 Dec  6  2016 .bashrc
-drwxr-sr-x 2 yourUsername tc001 4096 Nov 28 09:58 documents
--rw-r--r-- 1 yourUsername tc001  334 Mar  3  2017 .emacs
-drwxr-xr-x 4 yourUsername tc001 4096 Aug  2  2016 .mozilla
-drwx--S--- 2 yourUsername tc001 4096 Nov 28 09:58 .ssh
-
 drwx--x--x 17 traine everyone    29 Jul 21 14:22 .
 drwxr-xr-x 79 root  root         0 Jul 21 14:23 ..
 -rw-------  1 traine it_css   20442 Jul 21 15:24 .bash_history
@@ -321,6 +311,8 @@ drwxr-xr-x 79 root  root         0 Jul 21 14:23 ..
 -rw-r--r--  1 traine everyone   384 Mar 19 15:21 .bashrc
 -rw-r--r--  1 traine everyone  1154 Mar 24 10:16 .bash_udit
 drwxr-xr-x  2 traine everyone     2 Jul 13 15:48 documents
+drwx------  2 traine everyone      6 Mar 18  2020 .ssh
+-rw-------  1 traine everyone   1007 Oct 15 11:29 .Xauthority
 ```
 {: .output}
 
