@@ -23,6 +23,12 @@ At this point in the lesson, we've just logged into the system. Nothing has happ
 not going to be able to do anything until we learn a few basic commands. In this lesson we will talk
 about `ls`, `cd`, and a few other commands. These commands will help you navigate around not only the
  {{ site.workshop_host }} File structure but nearly any Linux/Unix File system using the CLI. 
+~~~
+for thing in collection:
+    do_something
+~~~
+{: .source}
+
 
 Right now, all we see is something that looks like this:
 
@@ -76,18 +82,20 @@ $ pwd
 {: .output}
 
 So, we know where we are. How do we look and see what's in our current directory?
-```
+~~~
 $ ls
-```
+~~~
 {: .language-bash}
 
 `ls` prints the names of the files and directories in the current directory in alphabetical order,
 arranged neatly into columns.
 
 > ## Differences between remote and local system
->
+> 
 > Open a second terminal window on your local computer and run the `ls` command without logging in
 > remotely. What differences do you see?
+> **Note:** Window users will not be able to do this with PuTTY, Since PuTTY only opens remote
+> conncetions. 
 >
 > > ## Solution
 > > You would likely see something more like this:
@@ -107,24 +115,28 @@ to play with.
 that this command required two pieces of input: the actual name of the command (`mkdir`) and an
 argument that specifies the name of the directory you wish to create.
 
-```
-$ mkdir documents
-```
+~~~
+$ mkdir training
+~~~
 {: .language-bash}
 
 Let's us `ls` again. What do we see?
+~~~
+training
+~~~
+{: .output}
 
 Our folder is there, awesome. What if we wanted to go inside it and do stuff there? We will use the
-`cd` (change directory) command to move around. Let's `cd` into our new documents folder.
+`cd` (change directory) command to move around. Let's `cd` into our new training folder.
 
-```
-$ cd documents
+~~~
+$ cd training
 $ pwd
-```
+~~~
 {: .language-bash}
-```
-{{ site.workshop_host_homedir }}/documents
-```
+~~~
+{{ site.workshop_host_homedir }}/training
+~~~
 {: .output}
 
 Now that we know how to use `cd`, we can go anywhere. That's a lot of responsibility. What happens
@@ -132,10 +144,10 @@ if we get "lost" and want to get back to where we started?
 
 To go back to your home directory, the following two commands will work:
 
-```
+~~~
 $ cd {{ site.workshop_host_homedir }}
 $ cd ~
-```
+~~~
 {: .language-bash}
 
 What is the `~` character? When using the shell, `~` is a shortcut that represents
@@ -147,15 +159,15 @@ or base directory.
 
 Let's go there now, look around, and then return to our home directory.
 
-```
+~~~
 $ cd /
 $ ls
-```
+~~~
 {: .language-bash}
-```
+~~~
 bin   dev  home  lib64   media  opt   root  sbin  sys  ttt  var
 boot  etc  lib   lustre  mnt    proc  run   srv   tmp  usr  work
-```
+~~~
 {: .output}
 
 The "home" directory is the one where we generally want to keep all of our files. Other folders on a
@@ -196,11 +208,11 @@ your OS.
 >   restored from the disaster recovery site.
 >
 >   You can check to see the size and usage of your home directory with the command 
->   ```
+>   ~~~
 >   df -h $HOME
->   ```
+>   ~~~
 > * **Work Group Storage** -  Each research group has at least 1000 GB of shared group (workgroup) 
->   storage in the /work directory identified by the `«investing_entity»` (e.g., /work/it_css) and is
+>   storage in the `/work` directoryidentified by the `«investing_entity»` (e.g., `/work/it_css`) and is
 >   referred to as your workgroup directory. This is used for input files, supporting data files, 
 >   work files, and output files, source code and executables that need to be shared with your 
 >   research group. Just as your home directory, read-only snapshots of workgroup's files are made 
@@ -210,9 +222,9 @@ your OS.
 >
 >   You can check the size and usage of your workgroup directory by using the workgroup command to 
 >   spawn a new workgroup shell, which sets the environment variable `$WORKDIR` 
->   ```
+>   ~~~
 >   df -h $WORKDIR
->   ```
+>   ~~~
 >
 > *High-performance filesystem:*   
 > * **Lustre Storage** - User storage is available on a high-performance Lustre-based filesystem 
@@ -224,9 +236,11 @@ your OS.
 >   it is a robust RAID-6 system. Thus, the filesystem can survive a concurrent disk failure of two
 >   independent hard drives and still rebuild its contents automatically. 
 >   
->   All users will use the public scratch directory (lustre/scratch). 
->   *A full system inhibits user for everyone, therefore IT staff may run cleanup procedures as needed to purge aged files or directories in 
->   /lustre/scratch if old files are degrading system performance.* 
+>   All users have access the public scratch directory (`/lustre/scratch`). 
+>
+>
+>   *A full system inhibits use for everyone potentially preventing jobs from running. Therefore IT staff may run cleanup procedures as needed to purge aged files or directories in 
+>   Lustre if old files are degrading system performance.* 
 {: .callout}
 
 There are several other useful shortcuts you should be aware of.
@@ -238,18 +252,18 @@ There are several other useful shortcuts you should be aware of.
 
 Let's try these out now:
 
-```
-$ cd ./documents
+~~~
+$ cd ./training
 $ pwd
 $ cd ..
 $ pwd
-```
+~~~
 {: .language-bash}
 
-```
-{{ site.workshop_host_homedir }}/documents
+~~~
+{{ site.workshop_host_homedir }}/training
 {{ site.workshop_host_homedir }}
-```
+~~~
 {: .output}
 
 Many commands also have multiple behaviours that you can invoke with command line 'flags.' What is a
@@ -264,14 +278,15 @@ otherwise, but that doesn't mean they aren't there! "Hidden" files are not hidde
 purposes, they are usually just config files and other tempfiles that the user doesn't necessarily
 need to see all the time.
 
-```
+~~~
 $ ls -a
-```
+~~~
 {: .language-bash}
-```
-.  ..  .bash_history .bash_logout  .bash_profile  .bashrc .bash_udit  documents  .ssh  
 
-```
+~~~
+.  ..  .bash_history .bash_logout  .bash_profile  .bashrc .bash_udit  training  .ssh  
+
+~~~
 {: .output}
 
 Notice how both `.` and `..` are visible as hidden files. 
@@ -279,14 +294,14 @@ Notice how both `.` and `..` are visible as hidden files.
 To show files, their size in bytes, date last modified, permissions, and other 
 things with `-l`.
 
-```
+~~~
 $ ls -l
-```
+~~~
 {: .language-bash}
-```
-drwxr-xr-x  2 traine everyone     2 Jul 13 15:48 documents
+~~~
+drwxr-xr-x  2 traine everyone     2 Jul 13 15:48 training
 
-```
+~~~
 {: .output}
 
 This is a lot of information to take in at once, but we will explain this later! `ls -l` is
@@ -295,12 +310,12 @@ actually looking at them.
 
 We can also use multiple flags at the same time!
 
-```
+~~~
 $ ls -l -a
-```
+~~~
 {: .language-bash}
 
-```
+~~~
 {{ site.workshop_host_prompt }} ls -la
 total 36
 drwx--x--x 17 traine everyone    29 Jul 21 14:22 .
@@ -310,33 +325,55 @@ drwxr-xr-x 79 root  root         0 Jul 21 14:23 ..
 -rw-r--r--  1 traine everyone   200 Jul 25  2018 .bash_profile
 -rw-r--r--  1 traine everyone   384 Mar 19 15:21 .bashrc
 -rw-r--r--  1 traine everyone  1154 Mar 24 10:16 .bash_udit
-drwxr-xr-x  2 traine everyone     2 Jul 13 15:48 documents
+drwxr-xr-x  2 traine everyone     2 Jul 13 15:48 training
 drwx------  2 traine everyone      6 Mar 18  2020 .ssh
 -rw-------  1 traine everyone   1007 Oct 15 11:29 .Xauthority
-```
+~~~
 {: .output}
 
 Flags generally precede any arguments passed to a UNIX command. `ls` actually takes an extra
 argument that specifies a directory to look into. When you use flags and arguments together, they
 syntax (how it's supposed to be typed) generally looks something like this:
 
-```
+~~~
 $ command <flags/options> <arguments>
-```
+~~~
 {: .language-bash}
 
 So using `ls -l -a` on a different directory than the one we're in would look something like:
-
-```
-$ ls -l -a ~/documents
-```
+####inputs
+~~~
+$ ls -l -a ~/training
+~~~
 {: .language-bash}
-
-```
+####outputs
+~~~
 drwxr-sr-x 2 yourUsername tc001 4096 Nov 28 09:58 .
 drwx--S--- 5 yourUsername tc001 4096 Nov 28 09:58 ..
-```
+~~~
 {: .output}
+
+Another useful flag is the `-F` flag. The `-F` appends indicators to entries which helps you 
+identify files verus directories.
+~~~
+ls -F -la
+~~~
+{: .language-bash}
+~~~
+drwx--x--x 17 traine everyone    29 Jul 21 14:22 ./
+drwxr-xr-x 79 root  root         0 Jul 21 14:23 ../
+-rw-------  1 traine it_css   20442 Jul 21 15:24 .bash_history
+-rw-r--r--  1 traine everyone    17 Jul 25  2018 .bash_logout
+-rw-r--r--  1 traine everyone   200 Jul 25  2018 .bash_profile
+-rw-r--r--  1 traine everyone   384 Mar 19 15:21 .bashrc
+-rw-r--r--  1 traine everyone  1154 Mar 24 10:16 .bash_udit
+drwxr-xr-x  2 traine everyone     2 Jul 13 15:48 training/
+drwx------  2 traine everyone      6 Mar 18  2020 .ssh/
+-rw-------  1 traine everyone   1007 Oct 15 11:29 .Xauthority
+~~~
+{: .output}
+As you can see in the above output rows that end with a `/` are directories. The rows that don't 
+end with a `/` are files.
 
 ## Where to go for help?
 
@@ -344,12 +381,12 @@ How did I know about the `-l` and `-a` options? Is there a manual we can look at
 need help? There is a very helpful manual for most UNIX commands: `man` (if you've ever heard of a
 "man page" for something, this is what it is).
 
-```
+~~~
 $ man ls
-```
+~~~
 {: .language-bash}
 
-```
+~~~
 LS(1)                                                   User Commands                                                  LS(1)
 
 NAME
@@ -364,7 +401,7 @@ DESCRIPTION
 
        Mandatory arguments to long options are mandatory for short options too.
 Manual page ls(1) line 1 (press h for help or q to quit)
-```
+~~~
 {: .output}
 
 To navigate through the `man` pages, you may use the up and down arrow keys to move line-by-line, or
@@ -373,12 +410,12 @@ try the spacebar and "b" keys to skip up and down by full page. Quit the `man` p
 Alternatively, most commands you run will have a `--help` option that displays addition information
 For instance, with `ls`:
 
-```
+~~~
 $ ls --help
-```
+~~~
 {: .language-bash}
 
-```
+~~~
 Usage: ls [OPTION]... [FILE]...
 List information about the FILEs (the current directory by default).
 Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
@@ -394,7 +431,7 @@ Mandatory arguments to long options are mandatory for short options too.
   -B, --ignore-backups       do not list implied entries ending with ~
 
 # further output omitted for clarity
-```
+~~~
 {: .output}
 
 > ## Unsupported command-line options

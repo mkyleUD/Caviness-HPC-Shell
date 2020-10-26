@@ -27,11 +27,8 @@ research computing capabilities.
 
 Caviness is University of Delaware's (UD) third community cluster. It was deployed in July 2018 and 
 is a distributed-memory Linux cluster. It is based on a rolling-upgradeable model for expansion and 
-replacement of hardware over time. The first generation consists of 126 compute nodes 
-(4536 cores, 24.6 TB memory). The nodes are built of Intel “Broadwell” 18-core processors in a 
-dual-socket configuration for 36-cores per node. An OmniPath network fabric supports high-speed 
-communication and the Lustre filesystem (approximately 200 TB of usable space). Gigabit and 10-Gigabit 
-Ethernet networks provide access to additional filesystems and the campus network. The cluster was 
+replacement of hardware over time. For more information on the specifics of Caviness hardware please
+vist the [Caviness](https://docs.hpc.udel.edu/abstract/caviness/caviness) page.  The cluster was 
 purchased with a proposed 5 year life to the first generation hardware, putting its refresh in the 
 April 2023 to June 2023 time period. 
 
@@ -100,8 +97,8 @@ at the start of the lesson.
 ## Caviness Cluster compared to the other clusters at UD and other HPC systems.
 
 The workload management software on Caviness is slurm. This is a common workload management 
-software for HPC systems but it is new to UD. The prior two community clusters used grid 
-engine for their workload manager. For setting up your computing environment Caviness will 
+software for HPC systems but it is new to UD. The prior two community clusters used Grid 
+Engine for their workload manager. For setting up your computing environment Caviness will 
 continue to use VALET, just as Mills and Farber have used. VALET is a recursive acronym for VALET
 Automates Linux Environment Tasks – is an alternative that strives to be as simple as possible to
 configure and to use. VALET is unique to UD, if you have used another HPC system you might be 

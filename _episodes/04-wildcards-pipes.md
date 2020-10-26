@@ -23,8 +23,6 @@ keypoints:
 > 
 > **Using wget** --- `wget {{site.url}}{{site.baseurl}}/files/bash-lesson.tar.gz`
 >
-> **Using a web browser** ---
-> [{{site.url}}{{site.baseurl}}/files/bash-lesson.tar.gz]({{site.url}}{{site.baseurl}}/files/bash-lesson.tar.gz)
 >
 > ```
 > $ cd ~

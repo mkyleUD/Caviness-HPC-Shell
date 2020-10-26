@@ -14,12 +14,32 @@ All students should have an SSH client installed.
 SSH is a tool that allows us to connect to and use a remote computer as our own.
 Please follow the directions below to install an SSH client for your system.
 
+### Linux
+
+Linux users do not need to install anything, you should be set!
+
+### macOS 
+
+Although macOS comes with SSH pre-installed, 
+you will likely want to install [XQuartz](www.xquartz.org) to enable graphical support
+(Also known as X11 or Xwin). Graphical support allows you to interact with a programs
+graphical user interface (GUI) and view images.
+
+***Note:*** You must restart your computer to complete the installation.
+
+
 ### Windows
+
+PuTTY is used to create a command line interface (CLI) on a remote system from machines running 
+a Windows operating system. Unlike Linux/UNIX and Mac, Windows does not have a native terminal
+that has an SSH client installed by default. While this is changing in newer versions of Windows,
+we are suggesting that all Windows users still install and use PuTTY. 
+
 **Download PuTTY** from [UDeploy](https://udeploy.udel.edu/software/putty-with-xming/).
-You might also want to download WinSCP, but that will not be need or covered in this workshop.
+You might also want to download WinSCP, but that will not be need or covered in this setup 
+or used during this workshop.
 
 **Install PuTTY**
-
 ***Note:*** This will require administrator privileges on your computer .
  
  * **Step 1:** Run the putty-X.XX-install.msi file that was download to begin the installation 
@@ -79,8 +99,12 @@ all the setting made in a saved session called caviness.
  ![PuTTY Install](/fig/step11LoggedOn.jpg) 
  
  
- **Download Xming and Xming-fonts** from [sourceForge](https://sourceforge.net/projects/xming/files/).
- 
+**Download Xming and Xming-fonts** from [sourceForge](https://sourceforge.net/projects/xming/files/).
+
+
+Xming is used to enable graphical support (Also known as X11 or Xwin). Graphical support allows 
+you to interact with a programs graphical user interface (GUI) and view images. 
+
 **Install XMing** 
 
 ***Note:*** This will require administrator privileges on your computer .
@@ -124,17 +148,12 @@ all the setting made in a saved session called caviness.
 
 ***Note:*** This will require administrator privileges on your computer .
 
-* **Directions :The default setting for the X Ming fonts are all correct. Simply start the 
+ * **Directions** :The default setting for the X Ming fonts are all correct. Simply start the 
 installation process and click "Next" or "Yes" till the final step of the Setup Wizard, then
 click "Install". 
 
+**Alternative Directions:**
+For an alternative set of directons on how to install PuTTY and XMING vist University of Delaware's
+service page on [Using X-Windows(X11) and secure shell(SSH) to connect to a remote UNIX Server(host)](https://services.udel.edu/TDClient/32/Portal/KB/ArticleDet?ID=491)
+. You can also email  [askit@udel.edu](mailto:askit@udel.edu) you are still having issues.
 
-### macOS 
-
-Although macOS comes with SSH pre-installed, 
-you will likely want to install [XQuartz](www.xquartz.org) to enable graphical support.
-Note that you must restart your computer to complete the installation.
-
-### Linux
-
-Linux users do not need to install anything, you should be set!

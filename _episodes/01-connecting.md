@@ -8,7 +8,8 @@ questions:
 objectives:
 - "Remotely connect to the Caviness Cluster"
 keypoints:
-- "Connect to the Caviness Cluster by using SSH: `ssh -Y yourUsername@caviness.hpc.udel.edu`"
+- "Connect to the Caviness Cluster by using SSH: `ssh yourUsername@caviness.hpc.udel.edu`"
+- "Connect to the Caviness Cluster by using SSH with X Win (using Xming): `ssh -Y yourUsername@caviness.hpc.udel.edu`"
 ---
 
 ## Opening a Terminal
@@ -43,6 +44,12 @@ of the Searchlight tool. Hold down the command key and press the spacebar. In th
 shows up type "terminal", choose the terminal app from the list of results (it will look like a
 tiny, black computer screen) and you will be presented with a terminal window. Alternatively, you
 can find Terminal under "Utilities" in the Applications menu.
+
+
+
+#### XQuartz
+
+Add information about what xquartz is and add link to the the setup page for xquartz.
 
 ### Windows
 
@@ -168,6 +175,10 @@ adopt the following convention:
 {: .callout}
 
 > ## Keep two terminal windows open
+>
+> For Mac and Linux user:
+> 
+>
 >
 > It is strongly recommended that you have two terminals open, one connected to the local system and
 > one connected to the remote system, that you can switch back and forth between. If you only use

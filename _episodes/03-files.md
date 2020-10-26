@@ -16,17 +16,17 @@ keypoints:
 - "`cp old new` copies a file."
 - "`cp old dir` copies a file to another directory `dir`."
 - "`rm path` deletes (removes) a file."
-- "File extensions are entirely arbitrary on UNIX systems."
+- "File extensions are entirely arbitrary on UNIX systems. However they are important for
+   applications to recognize files they use."
 ---
 
 Now that we know how to move around and look at things, let's learn how to read, write, and handle
 files! We'll start by moving back to our home directory and creating a scratch directory:
 
-```
-$ cd ~
-$ mkdir hpc-test
-$ cd hpc-test
-```
+~~~
+$ cd ~/training
+$ mkdir Documents
+~~~
 {: .language-bash}
 
 
@@ -43,9 +43,9 @@ To create or edit a file, type `nano <filename>`, on the terminal, where `<filen
 file.  If the file does not already exist, it will be created.
 Let's make a new file now, type whatever you want in it, and save it.
 
-```
+~~~
 $ nano draft.txt
-```
+~~~
 Add the following text `It's not "publish or perish" anymore, it's "share and thrive.`
 
 {: .language-bash}
@@ -84,36 +84,35 @@ Now save  your file and close nano.
 > should be aware of:
 >
 > * `:q!` --- quit, without saving
-> 
-* `:wq` --- save and quit
+> * `:wq` --- save and quit
 > * `dd` --- cut/delete a line
 > * `y` --- paste a line
 {: .callout}
 
 Do a quick check to confirm our file was created.
 
-```
+~~~
 $ ls
-```
+~~~
 {: .language-bash}
 
-```
-draft.txt
-```
+~~~
+Documents  draft.txt 
+~~~
 {: .output}
 
 Another way to create a file is with the `touch` command. The `touch` command is a simple way to
 create a empty file or to update the modified time of a file that already exists. 
 
-```
+~~~
 $ touch draft2.txt
 $ ls
-```
+~~~
 {: .language-bash}
 
-```
-draft2.txt  draft.txt
-```
+~~~
+Documents  draft2.txt  draft.txt
+~~~
 {: .output}
 
 ## Reading Files
@@ -121,15 +120,15 @@ draft2.txt  draft.txt
 Let's read the file we just created now. There are a few different ways of doing this, one of which is
 reading the entire file with `cat`.
 
-```
+~~~
 $ cat draft.txt
-```
+~~~
 {: .language-bash}
 
-```
+~~~
 It's not "publish or perish" any more,
 it's "share and thrive".
-```
+~~~
 {: .output}
 
 By default, `cat` prints out the content of the given file.
@@ -138,33 +137,33 @@ Although `cat` may not seem like an intuitive command with which to read files, 
 specified in the `cat`'s invocation.
 For example,
 
-```
+~~~
 $ cat draft.txt draft.txt
-```
+~~~
 {: .language-bash}
 
-```
+~~~
 It's not "publish or perish" any more,
 it's "share and thrive".
 It's not "publish or perish" any more,
 it's "share and thrive".
-```
+~~~
 {: .output}
 
 > ## Reading Multiple Text Files
 >
 > Create two more files using `nano`, giving them different names such as `chap1.txt` and
-> `chap2.txt`. Add unquie text into them such as "This is chap1.txt" and "This is chap2.txt" repectively.  Then use a single `cat` command to read and print the contents of `draft.txt`,
+> `chap2.txt`. Add unique text into them such as "This is chap1.txt" and "This is chap2.txt" repectively.  Then use a single `cat` command to read and print the contents of `draft.txt`,
 > `chap1.txt`, and `chap2.txt`.
 >
 > > ## Solution
-> > ```
+> > ~~~
 > > $ cat draft.txt chap1.txt chap2.txt
 > > It's not "publish  or perish" any more,
 > > it's "share and thrive".
 > > This is chap1.txt
 > > This is chap2.txt
-> > ```
+> > ~~~
 > > {: .output}
 > {: .solution}
 {: .challenge}
@@ -175,14 +174,14 @@ it's "share and thrive".
 We've successfully created a file. What about a directory? We've actually done this before, using
 `mkdir`.
 
-```
+~~~
 $ mkdir files
 $ ls
-```
+~~~
 {: .language-bash}
-```
-draft.txt  files
-```
+~~~
+Documents  draft2.txt  draft.txt  files
+~~~
 {: .output}
 
 
@@ -191,15 +190,15 @@ draft.txt  files
 **Moving**---We will move `draft.txt` to the `files` directory with `mv` ("move") command.
 The same syntax works for both files and directories: `mv <file/directory> <new-location>`
 
-```
+~~~
 $ mv draft.txt files
 $ cd files
 $ ls
-```
+~~~
 {: .language-bash}
-```
+~~~
 draft.txt
-```
+~~~
 {: .output}
 
 **Renaming**---`draft.txt` isn't a very descriptive name. How do we go about changing it?
@@ -207,14 +206,14 @@ It turns out that `mv` is also used to rename files and directories. Although th
 intuitive at first, think of it as *moving* a file to be stored under a different name. The syntax is
 quite similar to moving files: `mv oldName newName`.
 
-```
+~~~
 $ mv draft.txt newname.testfile
 $ ls
-```
+~~~
 {: .language-bash}
-```
+~~~
 newname.testfile
-```
+~~~
 {: .output}
 
 > ## File extensions are arbitrary
@@ -236,19 +235,19 @@ Use `cp` command (an abbreviated name for "copy"). This command has two differen
 
 Let's try this out.
 
-```
+~~~
 $ cp newname.testfile copy.testfile
 $ ls
 $ cp newname.testfile ..
 $ cd ..
 $ ls
-```
+~~~
 {: .language-bash}
 
-```
+~~~
 newname.testfile copy.testfile
-files documents newname.testfile
-```
+Documents  draft2.txt  files  newname.testfile
+~~~
 {: .output}
 
 ## Removing files
@@ -263,39 +262,42 @@ files documents newname.testfile
 Files are deleted with `rm file [moreFiles]`. To delete the `newname.testfile` in our current
 directory:
 
-```
+~~~
 $ ls
 $ rm newname.testfile
 $ ls
-```
+~~~
 {: .language-bash}
 
-```
-files Documents newname.testfile
-files Documents
-```
+~~~
+Documents  draft2.txt  files  newname.testfile
+Documents  draft2.txt  files
+~~~
 {: .output}
 
 That was simple enough. Directories are deleted in a similar manner using `rm -r` (the `-r` option
 stands for 'recursive').
 
-```
+~~~
 $ ls
-$ rm -r Documents
+$ rm Documents
+$ rmdir Documents
+$ rmdir files
 $ rm -r files
 $ ls
-```
+~~~
 {: .language-bash}
 
-```
+~~~
 files Documents
+rm: cannot remove ‘Documents’: Is a directory
 rmdir: failed to remove `files/': Directory not empty
-files
-```
+draft2.txt
+~~~
 {: .output}
 
 What happened? As it turns out, `rmdir` is unable to remove directories that have stuff in them. To
-delete a directory and everything inside it, we will use a special variant of `rm`, `rm -rf
+delete a directory and everything inside it, we will use a special variant of `rm`, `rm -r
 directory`. This is probably the scariest command on UNIX- it will force delete a directory and all
 of its contents without prompting. **ALWAYS** double check your typing before using it... if you
 leave out the arguments, it will attempt to delete everything on your file system that you have
@@ -315,33 +317,106 @@ permission to delete. So when deleting directories be very, very careful.
 > connected external hard drives). Moral of the story: **be very careful** when using `rm -rf`!
 {: .callout}
 
+Now before moving on lets finish cleaning up the files and directories that we created and will 
+no longer be need.
+~~~
+$ cd ~
+$ ls 
+$ rm -r Documents
+$ls -a
+~~~
+{: .language-bash}
+
+~~~
+Documents
+.  ..
+~~~
+{: .output}
+
+
 ## Looking at files
 
 Sometimes it's not practical to read an entire file with `cat` the file might be way too large,
 take a long time to open, or maybe we want to only look at a certain part of the file. As an
-example, we are going to look at a large and complex file type used in bioinformatics- a .gtf file.
+example, we are going to look at a large and complex file type used in bioinformatics, .gtf file extension.
 The GTF2 format is commonly used to describe the location of genetic features in a genome.
 
-Let's grab and unpack a set of demo files for use later. To do this, we'll use `wget` (`wget link`
-downloads a file from a link).
+Let's grab and unpack a set of demo files for use later. To do this, we'll use `wget` (`wget url`
+downloads a file from a url).
 
-```
+~~~
 $ cd ~
 $ mkdir lesson_files
 $ cd lesson_files
 $ wget {{site.url}}{{site.baseurl}}/files/bash-lesson.tar.gz
-```
+~~~
 {: .language-bash}
+
+> ## Problems with `wget`?
+>
+> `wget` is a stand-alone application for downloading things over HTTP/HTTPS and FTP/FTPS
+> connections, and it does the job admirably &ndash; when it is installed. 
+>
+> Some operating systems instead come with [cURL]( https://curl.haxx.se/), which is the
+> command-line interface to `libcurl`, a powerful library for programming interactions with remote
+> resources over a wide variety of network protocols. If you have `curl` but not `wget`, then try
+> this command instead:
+>
+> ```
+> $ curl -O {{site.url}}{{site.baseurl}}/files/bash-lesson.tar.gz
+> ```
+> {: .language-bash}
+>
+> For very large downloads, you might consider using [Aria2](https://aria2.github.io/), which has
+> support for downloading the same file from multiple mirrors. You have to install it separately,
+> but if you have it, try this to get it faster than your neighbors:
+>
+> ```
+> $ aria2c {{site.url}}{{site.baseurl}}/files/bash-lesson.tar.gz https://hpc-carpentry.github.io/hpc-shell/files/bash-lesson.tar.gz
+> ```
+> {: .language-bash}
+>
+> > ## Install cURL
+> >
+> > * macOS: `curl` is pre-installed on macOS. If you must have the latest version you can `brew
+> >   install` it, but only do so if the stock version has failed you.
+> > * Windows: `curl` comes preinstalled for the Windows 10 command line. For earlier Windows
+> >   systems, you can download the executable [directly](https://curl.haxx.se/windows/); run it in
+> >   place. 
+> >
+> >   `curl` comes preinstalled in [Git for Windows](https://gitforwindows.org/) and [Windows
+> >   Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10). On
+> >   [Cygwin](https://www.cygwin.com/), run the setup program again and select the `curl`
+> >   package to install it.
+> > * Linux: `curl` is packaged for every major distribution. You can install it through the usual
+> >   means.
+> >   - Debian, Ubuntu, Mint: `sudo apt install curl`
+> >   - CentOS, Red Hat: `sudo yum install curl` or `zypper install curl`
+> >   - Fedora: `sudo dnf install curl`
+> {: .solution}
+>
+> > ## Install Aria2
+> >
+> > * macOS: `aria2c` is available through a homebrew. `brew install aria2`.
+> > * Windows: download the latest [release](https://github.com/aria2/aria2/releases) and run
+> >   `aria2c` in place. If you're using the [Windows Subsystem for Linux](
+> >   https://docs.microsoft.com/en-us/windows/wsl/install-win10), 
+> > * Linux: every major distribution has an `aria2` package. Install it by the usual means.
+> >   - Debian, Ubuntu, Mint: `sudo apt install aria2`
+> >   - CentOS, Red Hat: `sudo yum install aria2` or `zypper install aria2`
+> >   - Fedora: `sudo dnf install aria2`
+> {: .solution}
+{: .callout}
 
 You'll commonly encounter `.tar.gz` archives while working in UNIX. To extract the files from a
 `.tar.gz` file, we run the command `tar -xvf filename.tar.gz`:
 
-```
+~~~
 $ tar -xvf bash-lesson.tar.gz
-```
+~~~
 {: .language-bash}
 
-```
+~~~
 dmel-all-r6.19.gtf
 dmel_unique_protein_isoforms_fb_2016_01.tsv
 gene_association.fb
@@ -361,7 +436,7 @@ SRR307029_1.fastq
 SRR307029_2.fastq
 SRR307030_1.fastq
 SRR307030_2.fastq
-```
+~~~
 {: .output}
 
 > ## Unzipping files
@@ -369,9 +444,9 @@ SRR307030_2.fastq
 > We just unzipped a .tar.gz file for this example. What if we run into other file formats that we
 > need to unzip? Just use the handy reference below:
 >
-> * `gunzip` extracts the contents of .gz files
-> * `unzip` extracts the contents of .zip files
-> * `tar -xvf` extracts the contents of .tar.gz and .tar.bz2 files
+> * `gunzip` extracts the contents of `.gz` files
+> * `unzip` extracts the contents of `.zip` files
+> * `tar -xvf` extracts the contents of `.tar.gz` and `.tar.bz2` files
 {: .callout}
 
 That is a lot of files! One of these files, `dmel-all-r6.19.gtf` is extremely large, and contains
@@ -387,8 +462,8 @@ too quickly! What are the alternatives? Try all of these out and see which ones 
 - `less  file`: Opens a file and display as much as possible on-screen. You can scroll with `Enter`
   or the up and down arrow keys on your keyboard. Press `q` to close the viewer.
 - `more file`: Opens a file and display as much as possible on-screen. You can scroll with `Enter`
-  or the arrow keys on your keyboard. Press `q` to close the viewer.
+  but not the arrow keys on your keyboard. Press `q` to close the viewer.
 
-Out of `cat`, `head`, `tail`, `more`, and `less`, which method of reading files is your favourite? Why?
+Out of `cat`, `head`, `tail`, `less`, and `more`, which method of reading files is your favorite? Why?
 
 {% include links.md %}
