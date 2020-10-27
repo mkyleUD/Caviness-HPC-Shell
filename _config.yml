@@ -101,7 +101,7 @@ exclude:
 highlighter: rouge
 
 # Invoke the Carpentries theme rather than copying into our repository.
-remote_theme: carpentries/carpentries-theme
+#remote_theme: carpentries/carpentries-theme
 
 # Local host and scheduler options:
 # * workshop_host - The name of the remote system
