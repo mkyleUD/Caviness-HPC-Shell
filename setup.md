@@ -45,7 +45,9 @@ or used during this workshop.
  * **Step 1:** Run the putty-X.XX-install.msi file that was download to begin the installation 
  process. Click "Next".
 
-![PuTTY Install Wizard](/fig/step1Welcome.jpg) 
+ ![PuTTY Install Wizard](/fig/step1Welcome.jpg)
+ 
+ [comment]: <> ![PuTTY Install Wizard](/fig/step1Welcome.jpg) 
  
  * **Step 2:** Use the default folder path destination. Click "Next".
 
