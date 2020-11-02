@@ -4,9 +4,7 @@ title: Setup
 permalink: /setup/
 ---
 
-There are several pieces of software you will wish to install before the workshop.
-Though installation help will be provided at the workshop, 
-we recommend that these tools are installed (or at least downloaded) beforehand.
+As stated in the prerequisites, below is an explanation of how to install the required software needed prior to starting the workshop.
 
 ## SSH
 
