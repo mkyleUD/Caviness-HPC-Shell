@@ -32,7 +32,7 @@ By the end of this workshop, students will know:
 > 
 > 
 > You are also required to follow the directions to install the required software that you will need
-> for this workshop. Information on the required software can be found on the [setup](./setup/) page.
+> for this workshop. Information on the required software can be found on the [Setup](./setup/) page.
 > 
 > If you need additional help installing the required software, please visit this
 > [UD Service help page](https://services.udel.edu/TDClient/32/Portal/KB/ArticleDet?ID=491) There
