@@ -34,7 +34,7 @@ that has an SSH client installed by default. While this is changing in newer ver
 we are suggesting that all Windows users install and use PuTTY. 
 
 **Download PuTTY** from [UDeploy](https://udeploy.udel.edu/software/putty-with-xming/).
-You might also want to download WinSCP, but that will not be needed for the workshop or covered in this setup.
+You might also want to download WinSCP, but it will not be needed for the workshop or covered in this setup.
 
 **Install PuTTY**
 ***Note:*** This will require administrator privileges on your computer .
