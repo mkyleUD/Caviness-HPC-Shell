@@ -78,7 +78,7 @@ X11 forwarding"
  ![PuTTY Install](/fig/step8X11.jpg) 
  
  * **Step 9:** Click on the "Session" category again. Then click the "Save" button. This will save 
-all the changed settings made in a saved session called caviness.
+all the changed settings made in a saved session called "caviness" in the Saved Sessions text box.
  
  ![PuTTY Install](/fig/step9SavedSession.jpg) 
  
