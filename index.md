@@ -3,7 +3,7 @@ layout: lesson
 root: .
 ---
 
-This workshop is an introduction to using high-performance computing systems effectively. We
+This workshop is an introduction to using high performance computing (HPC) systems effectively. We
 obviously can't cover every case or give an exhaustive course on parallel programming in just two
 days of teaching time. Instead, this workshop is intended to give students a good introduction and
 overview of the tools available and how to use them effectively.
@@ -17,7 +17,7 @@ By the end of this workshop, students will know:
 
 > ## NOTE
 >
-> This is a draft University of Delaware RCI Carpentry release. Comments and feedback are welcome.
+> This is a draft of the University of Delaware RCI Carpentry release. Comments and feedback are welcome.
 >
 >
 > This workshop has been customized for HPC users at the University of Delaware. With that in mind, we may use terms differently than they are used in traditional carpentry workshops. For example, 
@@ -27,16 +27,16 @@ By the end of this workshop, students will know:
 > ## Prerequisites
 >
 > You will need to have a Caviness user account for this workshop. For information on how to 
-> get a Caviness account please visit UD's HPC wiki page 
+> get a Caviness account, please visit UD's HPC wiki page 
 > [Caviness Account Requests](https://docs.hpc.udel.edu/abstract/caviness/account/account).
 > 
 > 
 > You are also required to follow the directions to install the required software that you will need
-> for this workshop. Information on the required software can be found on the [Setup Page](./setup/).
+> for this workshop. Information on the required software can be found on the [setup](./setup/) page.
 > 
-> If you need additional help installing the required software please visit 
-> [this UD Service page](https://services.udel.edu/TDClient/32/Portal/KB/ArticleDet?ID=491) There
-> you will find additional directions on how to install PuTTY and Xming on Windows, and Mac.
+> If you need additional help installing the required software, please visit this
+> [UD Service help page](https://services.udel.edu/TDClient/32/Portal/KB/ArticleDet?ID=491) There
+> you will find additional directions on how to install PuTTY and Xming on Windows.
 > You can also send an email to [askit@udel.edu](mailto:askit@udel.edu) if you encounter problems with the installation.
 > 
 > 
