@@ -15,7 +15,7 @@ keypoints:
 - "`mv old new` renames a file or directory."
 - "`cp old new` copies a file."
 - "`cp old dir` copies a file to another directory `dir`."
-- "`rm path` deletes (removes) a file????????."
+- "`rm path` deletes (removes) a file."
 - "File extensions are entirely arbitrary on UNIX systems. However they are important for
    applications to recognize files they use."
 ---
