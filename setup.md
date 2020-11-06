@@ -78,11 +78,11 @@ X11 forwarding"
  ![PuTTY Install](/fig/step8X11.jpg) 
  
  * **Step 9:** Click on the "Session" category again. Then click the "Save" button. This will save 
-all the setting made in a saved session called caviness.
+all the changed settings made in a saved session called caviness.
  
  ![PuTTY Install](/fig/step9SavedSession.jpg) 
  
- * **Step 10:** To open a PuTTY terminal to Caviness click "caviness" to highlight it then click 
+ * **Step 10:** To open a PuTTY terminal to Caviness, click "caviness" to highlight it then click 
  "Open". 
  
  ![PuTTY Install](/fig/step10openTerminal.jpg) 
