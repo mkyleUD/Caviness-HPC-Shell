@@ -22,7 +22,8 @@ run whenever we want, and are a great way to automate our work.
 Before we get started lets make sure that we are all in the same directory
 ```
 $ cd ~/lesson_files
-$ pwd {{site.workshop_host_homedir}}/lesson_files
+$ pwd 
+{{site.workshop_host_homedir}}/lesson_files
 ```
 
 > ## Keep An Eye On Spacing...
