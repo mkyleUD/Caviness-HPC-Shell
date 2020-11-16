@@ -1,12 +1,12 @@
 ---
-title: "Navigating the Caviness File Structure"
+title: "Navigating the Caviness File System Structure"
 teaching: 30 
 exercises: 5
 questions:
 - "How do I navigate and start interacting with files and directories on Caviness?"
-- "How do I track where I am at?"
+- "How do I keep track of where I am in the file system?"
 objectives:
-- Learn how to navigate around directories and look at their contents
+- Learn how to navigate around directories and look at their contents.
 - Explain the difference between a file and a directory.
 - Translate an absolute path into a relative path and vice versa.
 - Identify the actual command, flags, and filenames in a command-line call.
@@ -22,7 +22,7 @@ keypoints:
 At this point in the lesson, we've just logged into the system. Nothing has happened yet, and we're
 not going to be able to do anything until we learn a few basic commands. In this lesson we will talk
 about `ls`, `cd`, and a few other commands. These commands will help you navigate around not only the
- {{ site.workshop_host }} File structure but nearly any Linux/Unix File system using the CLI. 
+ {{ site.workshop_host }} file system structure but nearly any Linux/Unix file system using the CLI. 
 
 Right now, all we see is something that looks like this:
 
@@ -88,8 +88,8 @@ arranged neatly into columns.
 > 
 > Open a second terminal window on your local computer and run the `ls` command without logging in
 > remotely. What differences do you see?
-> **Note:** Window users will not be able to do this with PuTTY, Since PuTTY only opens remote
-> conncetions. 
+> **Note:** Window users will not be able to do this with PuTTY, since PuTTY only opens remote
+> connections. 
 >
 > > ## Solution
 > > You would likely see something more like this:
@@ -114,13 +114,13 @@ $ mkdir training
 ~~~
 {: .language-bash}
 
-Let's us `ls` again. What do we see?
+Let's type `ls` again. What do we see?
 ~~~
 training
 ~~~
 {: .output}
 
-Our folder is there, awesome. What if we wanted to go inside it and do stuff there? We will use the
+Our folder (directory) is there, awesome. What if we wanted to go inside it and do stuff there? We will use the
 `cd` (change directory) command to move around. Let's `cd` into our new training folder.
 
 ~~~
@@ -186,8 +186,8 @@ your OS.
 > ## Using HPC filesystems
 > On HPC systems, you have a number of places where you can store your files. These differ in both
 > the amount of space allocated and whether they are backed up or not.
-> Caviness has three different area where you can store files. Each of the different area serve 
-> different purposes. They also have different amounts of storage and are backed up differently as 
+> Caviness has three different types of storage where you can store files that serve 
+> different purposes. The amount of storage available and how they are backed up differs as 
 > well.
 >
 > File storage locations:
@@ -196,7 +196,7 @@ your OS.
 >   the home file system. Users' home directories are in /home (e.g., /home/1201), and the directory
 >   name is put in the environment variable `$HOME` at login. The permanent file system is configured 
 >   to allow nearly instantaneous, consistent snapshots. The snapshot contains the original version 
->   of the file system, and the live filesystem contains any changes made since the snapshot was 
+>   of the file system, and the live file system contains any changes made since the snapshot was 
 >   taken. In addition, all your files are regularly replicated at UD's off-campus disaster recovery 
 >   site. You can use read-only snapshots to revert a previous version, or request to have your files
 >   restored from the disaster recovery site.
