@@ -17,7 +17,7 @@ By the end of this workshop, students will know:
 
 > ## NOTE
 >
-> This is a draft of the University of Delaware RCI Carpentry release. Comments and feedback are welcome.
+> This is a draft of the University of Delaware Information Technologies Research CyberInfrastructure (IT-RCI) Carpentry release. Comments and feedback are welcome.
 >
 >
 > This workshop has been customized for HPC users at the University of Delaware. With that in mind, we may use terms differently than they are used in traditional carpentry workshops. For example, 
