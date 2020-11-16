@@ -6,16 +6,16 @@ questions:
 - "What is the Caviness Cluster and who can use it?"
 - "What can I expect to learn from this course?"
 objectives:
-- "Understand the basics about the Caviness Cluster, who are its owners and who can user it."
+- "Understand the basics about the Caviness Cluster, who are its owners and who can use it."
 - "Identify how the Caviness Cluster could benefit your research."
-- "Know how Caviness may diff from other High Performance Computing (HPC) Systems but also 
-other Clusters Here at Universtiy of Delaware"
+- "Know how Caviness may differ from other High Performance Computing (HPC) Systems but also 
+other clusters here at the University of Delaware"
 keypoints:
-- "Caviness is like other HPC Systems but does  use a custom program (VALET) for setting up the 
+- "Caviness is like other HPC systems but does use a custom program (VALET) for setting up the 
    computing environment."
 - "Caviness and HPC systems can be used to do work that would either be impossible or much slower on
-  smaller systems."
-- "The standard method of interacting with such systems is via a command line interface such as
+  a local desktop or lab computer."
+- "The standard method of interacting with most HPC systems is via a command line interface such as
   Bash."
 ---
 
@@ -29,14 +29,14 @@ Caviness is University of Delaware's (UD) third community cluster. It was deploy
 is a distributed-memory Linux cluster. It is based on a rolling-upgradeable model for expansion and 
 replacement of hardware over time. For more information on the specifics of Caviness hardware please
 vist the [Caviness](https://docs.hpc.udel.edu/abstract/caviness/caviness) page.  The cluster was 
-purchased with a proposed 5 year life to the first generation hardware, putting its refresh in the 
+purchased with a proposed 5 year life for the first generation hardware, putting its refresh in the 
 April 2023 to June 2023 time period. 
 
 Caviness is a technical and financial partnership between UD's Information Technologies and UD's 
 faculty and researchers who require high-performance computing resources. Faculty and researchers
 become financial stakeholders by purchasing HPC resources (based on the cost of one or more compute
 nodes) in the cluster. Only stakeholders and the researchers sponsored by a stakeholder may use the
-cluster. It is located at UD's Computeing Center.
+cluster. It is located at UD's Computing Center.
 
 
 
@@ -96,14 +96,15 @@ at the start of the lesson.
 
 ## Caviness Cluster compared to the other clusters at UD and other HPC systems.
 
-The workload management software on Caviness is slurm. This is a common workload management 
-software for HPC systems but it is new to UD. The prior two community clusters used Grid 
+The workload management software on Caviness is Slurm. It is commonly used for HPC systems 
+but it is new to UD. The prior two community clusters used Grid 
 Engine for their workload manager. For setting up your computing environment Caviness will 
 continue to use VALET, just as Mills and Farber have used. VALET is a recursive acronym for VALET
 Automates Linux Environment Tasks – is an alternative that strives to be as simple as possible to
-configure and to use. VALET is unique to UD, if you have used another HPC system you might be 
-familiar with Environment Modules Package, more commonly known as modules. VALET and modules 
-essentially perform the same services, but each have different syntax in doing so. More details on VALET 
+configure your environment to use software installed on the cluster. VALET is unique to UD, 
+if you have used another HPC system you might be 
+familiar with the Environment Modules Package, more commonly known as modules. VALET and modules 
+essentially perform the same services, but each have a different syntax in doing so. More details on VALET 
 will be coming later on in the course.
 
 ## On Command Line
@@ -138,7 +139,7 @@ you to reap the benefits described above.
 ## The rest of this lesson
 
 The only way to use these types of resources is by learning to use the command line. This
-introduction to Caviness systems has two parts:
+introduction to Caviness has two parts:
 
 * We will learn to use the UNIX command line (also known as Bash).
 * We will use our new Bash skills to connect to and operate a high-performance computing
