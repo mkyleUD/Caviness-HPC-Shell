@@ -335,12 +335,12 @@ $ command <flags/options> <arguments>
 {: .language-bash}
 
 So using `ls -l -a` on a different directory than the one we're in would look something like:
-####inputs
+
 ~~~
 $ ls -l -a ~/training
 ~~~
 {: .language-bash}
-####outputs
+
 ~~~
 drwxr-sr-x 2 yourUsername tc001 4096 Nov 28 09:58 .
 drwx--S--- 5 yourUsername tc001 4096 Nov 28 09:58 ..
