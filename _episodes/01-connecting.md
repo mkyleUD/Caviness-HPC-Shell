@@ -49,7 +49,10 @@ can find Terminal under "Utilities" in the Applications menu.
 
 #### XQuartz
 
-Add information about what xquartz is and add link to the the setup page for xquartz.
+XQuartz is an open-source project thats goal is to bring X.org Window Systems to the Mac operating 
+system. It allows for GUI, images, and other graphical interactions on a remote machine to be viewable
+on a local machine connected to the remote system. For more information about it or to download it visit
+the [XQuartz sites](https://www.xquartz.org/)
 
 ### Windows
 
