@@ -223,7 +223,7 @@ newname.testfile
 > it is. Changing the name or extension of the file will *never* change a file's contents, so you
 > are free to rename things as you wish. With that in mind, however, file extensions are a useful
 > tool for keeping track of what type of data it contains. A `.txt` file typically contains text,
-> for instance. The extensions my also be used by other applications to help interpret the files
+> for instance. The extensions may also be used by other applications to help interpret the files
 > contents. For example changing `.mp3` to `.txt` might make the file unreadable to a music player. 
 {: .callout}
 
