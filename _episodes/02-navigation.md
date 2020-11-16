@@ -23,12 +23,6 @@ At this point in the lesson, we've just logged into the system. Nothing has happ
 not going to be able to do anything until we learn a few basic commands. In this lesson we will talk
 about `ls`, `cd`, and a few other commands. These commands will help you navigate around not only the
  {{ site.workshop_host }} File structure but nearly any Linux/Unix File system using the CLI. 
-~~~
-for thing in collection:
-    do_something
-~~~
-{: .source}
-
 
 Right now, all we see is something that looks like this:
 
