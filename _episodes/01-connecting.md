@@ -6,10 +6,10 @@ questions:
 - "How do I open a terminal?"
 - "How do I connect to a remote computer?"
 objectives:
-- "Remotely connect to the Caviness Cluster"
+- "Remotely connect to the Caviness cluster"
 keypoints:
-- "Connect to the Caviness Cluster by using SSH: `ssh yourUsername@caviness.hpc.udel.edu`"
-- "Connect to the Caviness Cluster by using SSH with X Win (using Xming): `ssh -Y yourUsername@caviness.hpc.udel.edu`"
+- "Connect to the Caviness cluster by using SSH: `ssh yourUsername@caviness.hpc.udel.edu`"
+- "Connect to the Caviness cluster by using SSH with X Win (using Xming): `ssh -Y yourUsername@caviness.hpc.udel.edu`"
 ---
 
 ## Opening a Terminal
@@ -19,7 +19,7 @@ usually it is run through a terminal. So, to begin using  {{ site.workshop_host 
 a terminal. Different operating systems have different terminals, none of which are exactly the same
 in terms of their features and abilities while working on the local operating system. When connected to
 the remote system the experience between terminals will be identical as each will faithfully present
-the same experience of the  {{ site.workshop_host }}  Cluster.
+the same experience of the  {{ site.workshop_host }}  cluster.
 
 Here is the process for opening a terminal in each operating system.
 
