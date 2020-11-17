@@ -505,7 +505,7 @@ Mandatory arguments to long options are mandatory for short options too.
 
 > ## `ls` Reading Comprehension
 >
-> Assuming a directory structure as in the above Figure (File System for Challenge Questions), if
+> Assuming a directory structure as in the above diagram, if
 > `pwd` displays `/home/1201/development`, and `-r` tells `ls` to display things in reverse order, what
 > command will display:
 >
