@@ -1,10 +1,10 @@
 ---
-title: "Navigating the Caviness File System Structure"
+title: "Navigating the Caviness Filesystem"
 teaching: 30 
 exercises: 5
 questions:
 - "How do I navigate and start interacting with files and directories on Caviness?"
-- "How do I keep track of where I am in the file system?"
+- "How do I keep track of where I am in the filesystem?"
 objectives:
 - Learn how to navigate around directories and look at their contents.
 - Explain the difference between a file and a directory.
@@ -22,7 +22,7 @@ keypoints:
 At this point in the lesson, we've just logged into the system. Nothing has happened yet, and we're
 not going to be able to do anything until we learn a few basic commands. In this lesson we will talk
 about `ls`, `cd`, and a few other commands. These commands will help you navigate around not only the
- {{ site.workshop_host }} file system structure but nearly any Linux/Unix file system using the CLI. 
+ {{ site.workshop_host }} filesystem structure but nearly any Linux/Unix filesystem using the CLI. 
 
 Right now, all we see is something that looks like this:
 
@@ -193,10 +193,10 @@ your OS.
 > File storage locations:
 >
 > * **Home Directory Storage** -  Each user has 20 GB of disk storage reserved for personal use on 
->   the home file system. Users' home directories are in /home (e.g., /home/1201), and the directory
->   name is put in the environment variable `$HOME` at login. The permanent file system is configured 
+>   the home filesystem. Users' home directories are in /home (e.g., /home/1201), and the directory
+>   name is put in the environment variable `$HOME` at login. The permanent filesystem is configured 
 >   to allow nearly instantaneous, consistent snapshots. The snapshot contains the original version 
->   of the file system, and the live file system contains any changes made since the snapshot was 
+>   of the filesystem, and the live filesystem contains any changes made since the snapshot was 
 >   taken. In addition, all your files are regularly replicated at UD's off-campus disaster recovery 
 >   site. You can use read-only snapshots to revert a previous version, or request to have your files
 >   restored from the disaster recovery site.
@@ -206,7 +206,7 @@ your OS.
 >   df -h $HOME
 >   ~~~
 > * **Work Group Storage** -  Each research group has at least 1000 GB of shared group (workgroup) 
->   storage in the `/work` directoryidentified by the `«investing_entity»` (e.g., `/work/it_css`) and is
+>   storage in the `/work` directory identified by the `«investing_entity»` (e.g., `/work/it_css`) and is
 >   referred to as your workgroup directory. This is used for input files, supporting data files, 
 >   work files, and output files, source code and executables that need to be shared with your 
 >   research group. Just as your home directory, read-only snapshots of workgroup's files are made 
