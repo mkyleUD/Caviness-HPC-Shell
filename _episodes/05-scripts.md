@@ -8,7 +8,7 @@ objectives:
 - "Write a shell script"
 - "Understand and manipulate UNIX permissions"
 - "Understand shell variables and how to use them"
-- "Write a simple for loop"
+- "Write a simple `for` loop"
 keypoints:
 - "A shell script is just a list of bash commands in a text file."
 - "`chmod +x script.sh` will give it permission to execute."
@@ -28,9 +28,9 @@ $ pwd
 
 > ## Keep An Eye On Spacing...
 >
-> When creating a new variable or working on a script, it is very important to monitor when too use,
-> and not to use a space. Using a space at the wrong spot can have consequences that will cause your
-> code to not work correctly.
+> When creating a new variable or working on a script, it is very important to monitor when to use,
+> and when not to use a space---spacing is very important. Using a space in the wrong spot can have 
+> consequences that will cause your code to not work correctly.
 >
 {: .callout}
 
