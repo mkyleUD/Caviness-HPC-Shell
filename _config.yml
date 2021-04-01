@@ -129,6 +129,6 @@ workshop_sched_id: "traine@r00n56"
 # workshop_host_homedir: "/lustre/home/tc001"
 
 # Costum host location THIS SHOULD BE REMOVED BEFORE BEING PUT INTO PRODUCTION
-host: 192.168.123.114
+host: 192.168.123.113
 
 # theme: jekyll-theme-cayman
